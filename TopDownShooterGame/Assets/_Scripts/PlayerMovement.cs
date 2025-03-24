@@ -23,8 +23,11 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
 
+        //Calculates the direction from the player's position to the mouse position.
         Vector2 lookDir = mousePos - rb.position;
+        //This calculates the angle
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        //This makes the sprite face the way where the mousepointer is
         rb.rotation = angle;
     }
 }
