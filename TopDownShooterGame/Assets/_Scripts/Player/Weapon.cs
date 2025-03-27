@@ -3,10 +3,19 @@ using UnityEngine;
 public class GunMovement : MonoBehaviour
 {
     public GameObject tri;
+    public GameObject BulletPrefab;
     public Camera cam;
     public Transform player;
+    public float fireForce = 20f;
+    public Transform firePoint;
 
     Vector2 mousePos;
+
+    public void Attack()
+    {
+        GameObject bullet = Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
+        bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+    }
 
     // Update is called once per frame
     void Update()

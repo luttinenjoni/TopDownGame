@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody2D rb;
+    public GunMovement weapon;
 
     public float moveSpeed = 5f;
     public Camera cam;
@@ -17,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            weapon.Attack();
+        }
     }
 
     void FixedUpdate()
