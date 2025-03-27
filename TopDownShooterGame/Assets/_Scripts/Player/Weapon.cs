@@ -15,6 +15,7 @@ public class GunMovement : MonoBehaviour
     {
         GameObject bullet = Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+        Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), player.GetComponent<Collider2D>());
     }
 
     // Update is called once per frame
