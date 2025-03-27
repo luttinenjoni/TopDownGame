@@ -1,31 +1,26 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class GunMovement : MonoBehaviour
 {
-
-    public Rigidbody2D rb;
-
-    public float moveSpeed = 5f;
+    public GameObject tri;
     public Camera cam;
+    public Transform player;
 
-    Vector2 movement;
     Vector2 mousePos;
 
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-    }
 
+        tri.transform.position = player.position;
+    }
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-
         //Calculates the direction from the player's position to the mouse position.
-        Vector2 lookDir = mousePos - rb.position;
+        Vector2 lookDir = mousePos - (Vector2)tri.transform.position;
         //This calculates the angle
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        tri.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 }
