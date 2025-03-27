@@ -6,7 +6,6 @@ public class GunMovement : MonoBehaviour
     public GameObject BulletPrefab;
     public Camera cam;
     public Transform player;
-    public PlayerMovement playercol;
     public float fireForce = 20f;
     public Transform firePoint;
 
