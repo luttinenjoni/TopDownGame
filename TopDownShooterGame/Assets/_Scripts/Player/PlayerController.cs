@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         {
             weapon.Attack();
         }
+
     }
 
     void FixedUpdate()
