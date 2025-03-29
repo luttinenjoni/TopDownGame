@@ -6,9 +6,12 @@ public class HealthScript : MonoBehaviour
     public int maxHealth = 10; //HP:n määrä
     public int currentHealth;
     public Slider healthBar;
+    private Transform player;
+    public GameOverManager gameOverManager;
 
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         currentHealth = maxHealth; //Kohteella on synnyttyään täydet HP:t.
         UpdateHealthBar(); // HP-palkki täysille
     }
@@ -20,8 +23,23 @@ public class HealthScript : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject); //Tuhoaa kohteen, kun 0HP
+
+            if (gameObject.CompareTag("Player"))
+            {
+                PlayerDies();
+            }
+
+            if (gameObject.CompareTag("Enemy"))
+            {
+                Destroy(gameObject);
+            }
+            
         }
+    }
+
+    void PlayerDies()
+    {
+        gameOverManager.ShowGameOver();
     }
 
     void UpdateHealthBar()
