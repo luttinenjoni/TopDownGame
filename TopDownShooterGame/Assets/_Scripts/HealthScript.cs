@@ -31,6 +31,10 @@ public class HealthScript : MonoBehaviour
 
             if (gameObject.CompareTag("Enemy"))
             {
+                if (ScoreManager.Instance != null)
+                {
+                    ScoreManager.Instance.AddScore(100);
+                }
                 Destroy(gameObject);
             }
             
