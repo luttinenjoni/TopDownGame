@@ -43,6 +43,9 @@ TagManager:
   - name: Ground
     uniqueID: 351757055
     locked: 0
+  - name: Props
+    uniqueID: 3939451751
+    locked: 0
   - name: bullet
     uniqueID: 2030642131
     locked: 0
