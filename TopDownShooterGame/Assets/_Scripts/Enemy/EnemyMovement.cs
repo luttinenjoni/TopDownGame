@@ -14,10 +14,8 @@ public class EnemyMovement : MonoBehaviour
     {
         if (player == null) return;
 
-        if (gameObject.name.StartsWith("PinkSquare")) //Jos vihollinen on pinkki neliö, se liikkuu pelaajaa kohti.
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        }
+        transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        
         
     }
 }
