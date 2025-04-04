@@ -321,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1505255633}
   gameOverManager: {fileID: 0}
 --- !u!61 &141220210
 BoxCollider2D:
@@ -3637,7 +3637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 378235347}
   gameOverManager: {fileID: 0}
 --- !u!61 &891096122
 BoxCollider2D:
