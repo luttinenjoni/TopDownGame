@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5912298966699343903}
   - component: {fileID: 7320074228833986486}
   - component: {fileID: 8951918400648084283}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TestTree02_0 1
-  m_TagString: Tree
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -106,7 +106,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -125,7 +125,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.0053420663, y: 0.004674494}
-  m_Radius: 0.26962382
+  m_Radius: 0.52
 --- !u!50 &3560021938824665766
 Rigidbody2D:
   serializedVersion: 5
