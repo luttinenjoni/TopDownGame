@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ForceAspectRatio : MonoBehaviour
 {
-    public float targetAspect = 16f / 9f; // 16:9
+    public float targetAspect = 16f / 9f; // 16
 
     void Start()
     {
