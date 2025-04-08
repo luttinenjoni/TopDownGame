@@ -1,6 +1,7 @@
 Credits:
 
 Programming: Joni Luttinen, Nico Lust
+
 Art: Veeti Tiilikainen, Samuel Dunder
 
 Music:
