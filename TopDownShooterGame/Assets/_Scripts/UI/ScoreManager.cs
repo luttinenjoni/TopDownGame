@@ -1,13 +1,20 @@
 using UnityEngine;
 using TMPro;
 using System.Net.NetworkInformation;
+using System.Collections;
+using Microsoft.Unity.VisualStudio.Editor;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
     public int enemyValue = 10;
+    public UnityEngine.UI.Image BlackFade;
     public TextMeshProUGUI enemyCounter;
     public TextMeshProUGUI scoreText;
+    public GameObject WinScreen;
+    public string sceneToLoad;
     private int score = 0;
 
     private void Start()
@@ -33,6 +40,12 @@ public class ScoreManager : MonoBehaviour
     {
         enemyValue -= 1;
         UpdateEnemyText();
+
+        if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
+        {
+            Time.timeScale = 0f;
+            WinScreen.SetActive(true);
+        }
     }
 
     public void AddScore(int points)
@@ -48,5 +61,38 @@ public class ScoreManager : MonoBehaviour
     private void UpdateEnemyText()
     {
         enemyCounter.text = "Enemies left: " + enemyValue;
+    }
+
+
+
+    public void MenuButtonPressed()
+    {
+        Debug.Log("Nappia painettu");
+        StartCoroutine(FadeOutAndLoad(2f));
+    }
+
+    IEnumerator FadeOutAndLoad(float duration)
+    {
+    // Pidä peli pausella, kunnes fade on valmis
+    float elapsed = 0f;
+    Color color = BlackFade.color;
+    color.a = 0f;
+    BlackFade.color = color;
+
+    while (elapsed < duration)
+    {
+        color.a = Mathf.Lerp(0f, 1f, elapsed / duration);
+        BlackFade.color = color;
+        elapsed += Time.unscaledDeltaTime; // Käytetään unscaledDeltaTimea, jotta animointi ei vaikuta Time.timeScale
+        yield return null;
+    }
+
+    color.a = 1f;
+    BlackFade.color = color;
+    SceneManager.LoadScene(sceneToLoad);
+
+    // Varmistetaan, että peli jatkuu normaalisti
+    // Tämä on viimeinen kohta, missä Time.timeScale asetetaan takaisin 1
+    Time.timeScale = 1f;
     }
 }

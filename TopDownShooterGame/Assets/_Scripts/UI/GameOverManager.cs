@@ -11,11 +11,13 @@ public class GameOverManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject GameOverUI;
     public string sceneToLoad;
+    public GameObject WinScreen;
 
     private AudioSource audioSource;
 
     private void Start()
     {
+        WinScreen.SetActive(false); //Hide WinScreen at start
         audioSource = GetComponent<AudioSource>();
         Color color = BlackFade.color;
         color.a = 0f;
