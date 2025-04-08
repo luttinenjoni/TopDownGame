@@ -43,7 +43,7 @@ public class HealthScript : MonoBehaviour
 
     void PlayerDies()
     {
-        gameOverManager.ShowGameOver();
+        StartCoroutine(gameOverManager.ShowGameOver());
     }
 
     void UpdateHealthBar()

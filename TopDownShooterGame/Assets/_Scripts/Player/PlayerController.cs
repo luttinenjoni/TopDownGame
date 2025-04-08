@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            if (Time.timeScale == 0f) //Jos peli on pausella, älä ammu.
+                return;
             weapon.Attack();
         }
 
