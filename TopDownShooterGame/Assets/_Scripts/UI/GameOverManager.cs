@@ -12,8 +12,11 @@ public class GameOverManager : MonoBehaviour
     public GameObject GameOverUI;
     public string sceneToLoad;
 
+    private AudioSource audioSource;
+
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Color color = BlackFade.color;
         color.a = 0f;
         BlackFade.color = color; //BLackFade muuttuu näkymättömäksi
@@ -28,6 +31,7 @@ public class GameOverManager : MonoBehaviour
 
     public IEnumerator ShowGameOver()
     {
+        audioSource.Play();
         Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(1);
 

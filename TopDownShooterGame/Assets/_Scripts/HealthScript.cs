@@ -35,6 +35,7 @@ public class HealthScript : MonoBehaviour
                 {
                     ScoreManager.Instance.AddScore(100);
                 }
+                ScoreManager.Instance.EnemyKilled();
                 Destroy(gameObject);
             }
             
