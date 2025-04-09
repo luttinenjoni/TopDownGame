@@ -28,44 +28,32 @@ public class SpawnManager : MonoBehaviour
 
         randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
         spawnPoint = spawnPoints[randomIndex];
+        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
+
+    public IEnumerator WaveTwo()
+    {
+        Debug.Log("Wave 2 begun");
+        yield return new WaitForSeconds(2);
+
+        int randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        Transform spawnPoint = spawnPoints[randomIndex];
 
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+
+        yield return new WaitForSeconds(5);
+
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
+
+        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+
         yield return new WaitForSeconds(4);
 
         randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
         spawnPoint = spawnPoints[randomIndex];
-
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
-        yield return new WaitForSeconds(4);
 
-        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
-        spawnPoint = spawnPoints[randomIndex];
-
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
-        yield return new WaitForSeconds(4);
-
-        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
-        spawnPoint = spawnPoints[randomIndex];
-
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
-        yield return new WaitForSeconds(4);
-
-        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
-        spawnPoint = spawnPoints[randomIndex];
-
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
-        yield return new WaitForSeconds(4);
-
-        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
-        spawnPoint = spawnPoints[randomIndex];
-
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
-        yield return new WaitForSeconds(3);
-
-        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
-        spawnPoint = spawnPoints[randomIndex];
-
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
         yield return new WaitForSeconds(3);
 
         randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
@@ -73,4 +61,43 @@ public class SpawnManager : MonoBehaviour
 
         Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
     }
+
+    public IEnumerator WaveThree()
+    {
+        yield return new WaitForSeconds(2);
+
+        int randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        Transform spawnPoint = spawnPoints[randomIndex];
+
+        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+
+        yield return new WaitForSeconds(3);
+
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
+
+        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+
+        yield return new WaitForSeconds(3);
+
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
+        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+
+        yield return new WaitForSeconds(3);
+
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
+
+        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+
+        yield return new WaitForSeconds(3);
+
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
+
+        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+    }
+
+
 }

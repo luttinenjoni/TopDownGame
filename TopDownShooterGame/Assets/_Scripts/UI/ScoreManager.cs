@@ -9,13 +9,14 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
-    public int enemyValue = 10;
+    public int enemyValue = 12;
     public UnityEngine.UI.Image BlackFade;
     public TextMeshProUGUI enemyCounter;
     public TextMeshProUGUI scoreText;
     public GameObject WinScreen;
     public string sceneToLoad;
     private int score = 0;
+     public SpawnManager spawnManager;
 
     private void Start()
     {
@@ -40,6 +41,16 @@ public class ScoreManager : MonoBehaviour
     {
         enemyValue -= 1;
         UpdateEnemyText();
+
+        if (enemyValue == 9) //Wave Two begins, when there are 9 alive enemies left
+        {
+            StartCoroutine(spawnManager.WaveTwo());
+        }
+
+        if (enemyValue == 5)
+        {
+            StartCoroutine(spawnManager.WaveThree());
+        }
 
         if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
         {
