@@ -281,6 +281,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBar: {fileID: 337232642101202257}
   gameOverManager: {fileID: 0}
+  healthItemPrefab: {fileID: 6706415200545705683, guid: 972108c2f3a1da54c8810da3443b979e, type: 3}
 --- !u!114 &2668119080155314670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  avoidanceRadius: 0.8
+  stopDistance: 0.05
+  avoidanceStrength: 0.1
+  rayLength: 0.2
 --- !u!50 &8407729769800827103
 Rigidbody2D:
   serializedVersion: 5

@@ -8,6 +8,7 @@ public class HealthScript : MonoBehaviour
     public Slider healthBar;
     private Transform player;
     public GameOverManager gameOverManager;
+    public GameObject healthItemPrefab;
 
     void Start()
     {
@@ -36,7 +37,13 @@ public class HealthScript : MonoBehaviour
                     ScoreManager.Instance.AddScore(100);
                 }
                 ScoreManager.Instance.EnemyKilled();
+
+                if (Random.value < 0.15f && healthItemPrefab != null)
+                {
+                    Instantiate(healthItemPrefab, transform.position, Quaternion.identity);
+                }
                 Destroy(gameObject);
+
             }
             
         }
