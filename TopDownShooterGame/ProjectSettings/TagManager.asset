@@ -45,6 +45,9 @@ TagManager:
   - name: Ground
     uniqueID: 351757055
     locked: 0
+  - name: Props2
+    uniqueID: 3167304453
+    locked: 0
   - name: Props
     uniqueID: 3939451751
     locked: 0
