@@ -17,6 +17,10 @@ public class EnemyBullet : MonoBehaviour
         other.GetComponent<HealthScript>()?.TakeDamage(1);
         Destroy(gameObject);
     }
-}
+    if (other.CompareTag("Obstacle"))
+        {
+            Destroy(gameObject) ;
+        }
+    }
 
     }
