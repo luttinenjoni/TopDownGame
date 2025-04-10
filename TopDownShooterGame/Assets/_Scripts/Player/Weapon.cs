@@ -17,7 +17,6 @@ public class GunMovement : MonoBehaviour
     {
         FiresShot += 1;
 
-        // Get the GunMovement script (assuming it's attached to the Player)
         GunMovement gunMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<GunMovement>();
 
         GameObject bullet = Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
@@ -26,7 +25,7 @@ public class GunMovement : MonoBehaviour
         {
             bullet.GetComponent<Bullet>().gunMovement = gunMovement;
         }
-        
+
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
         Physics2D.IgnoreCollision(bullet.GetComponent<Collider2D>(), player.GetComponent<Collider2D>());
     }

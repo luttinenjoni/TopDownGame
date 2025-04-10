@@ -12502,7 +12502,8 @@ MonoBehaviour:
   orbScript: {fileID: 1044022659}
   timer: 0
   isRunning: 0
-  weaponScript: {fileID: 0}
+  weaponScript: {fileID: 1087420102}
+  player: {fileID: 1082886416}
   KillText: {fileID: 1096740766}
   TimeText: {fileID: 1695998134}
   HPText: {fileID: 1696462633}
@@ -12511,7 +12512,7 @@ MonoBehaviour:
   TimeScore: {fileID: 899041333}
   HPScore: {fileID: 1891560520}
   AccuracyScore: {fileID: 388166035}
-  TotalScore: {fileID: 0}
+  TotalScore: {fileID: 935611106}
 --- !u!4 &2121219968
 Transform:
   m_ObjectHideFlags: 0
