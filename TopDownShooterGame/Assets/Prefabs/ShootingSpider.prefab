@@ -311,9 +311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  stopDistance: 0.05
-  avoidanceStrength: 0.1
-  rayLength: 0.2
+  stopDistance: 0.5
+  avoidanceStrength: 1.5
+  rayLength: 3
 --- !u!50 &8407729769800827103
 Rigidbody2D:
   serializedVersion: 5
