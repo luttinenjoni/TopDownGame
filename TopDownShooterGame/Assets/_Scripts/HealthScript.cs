@@ -61,4 +61,9 @@ public class HealthScript : MonoBehaviour
             healthBar.value = (float)currentHealth / maxHealth;//Päivitä HP-palkki
         }
     }
+
+    public int CurrentHealth()
+        {
+            return currentHealth;
+        }
 }
