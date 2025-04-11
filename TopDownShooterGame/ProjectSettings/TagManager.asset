@@ -54,14 +54,14 @@ TagManager:
   - name: Props
     uniqueID: 3939451751
     locked: 0
-  - name: bullet
+  - name: player
+    uniqueID: 3993408433
+    locked: 0
+  - name: tree
     uniqueID: 2030642131
     locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: player
-    uniqueID: 3993408433
     locked: 0
   m_RenderingLayers:
   - Default
