@@ -4,6 +4,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public Rigidbody2D rb;
+    public Animator ani;
     public GunMovement weapon;
 
     public float moveSpeed = 5f;
@@ -11,11 +12,18 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
+    private const string horizontal = "Horizontal";
+    private const string vertical = "Vertical";
+
+
     // Update is called once per frame
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        ani.SetFloat(horizontal, movement.x);
+        ani.SetFloat(vertical, movement.y);
 
         if (Input.GetMouseButtonDown(0))
         {
