@@ -73,7 +73,7 @@ public class ScoreManager : MonoBehaviour
         EnemiesKilled += 1;
         UpdateEnemyText();
 
-        if (enemyValue == 9) //Wave Two begins, when there are 9 alive enemies left
+        if (enemyValue == 10) //Wave Two begins, when there are 9 alive enemies left
         {
             StartCoroutine(spawnManager.WaveTwo());
         }

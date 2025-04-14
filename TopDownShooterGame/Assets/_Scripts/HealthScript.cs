@@ -17,6 +17,15 @@ public class HealthScript : MonoBehaviour
         UpdateHealthBar(); // HP-palkki täysille
     }
 
+    void Update()
+    {
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth; //If the player receives more health than maxHealth, return currentHealth to MaxHealth.
+            UpdateHealthBar();
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage; //HP:sta vähennetään damagen määrä
