@@ -71,6 +71,7 @@ public class GameOverManager : MonoBehaviour
 
     public void MenuButtonPressed()
     {
+        BlackFade.gameObject.SetActive(true);
         Debug.Log("Nappia painettu");
         StartCoroutine(FadeOutAndLoad(2f));
     }
