@@ -1,5 +1,6 @@
 using System.Collections;
 using Microsoft.Unity.VisualStudio.Editor;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +13,9 @@ public class GameOverManager : MonoBehaviour
     public GameObject GameOverUI;
     public string sceneToLoad;
     public GameObject WinScreen;
+
+    public TextMeshProUGUI ScoreText;
+    public ScoreManager scoreManager;
 
     private AudioSource audioSource;
 
@@ -33,9 +37,12 @@ public class GameOverManager : MonoBehaviour
 
     public IEnumerator ShowGameOver()
     {
+        int score = scoreManager.score;
         audioSource.Play();
         Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(1);
+
+        ScoreText.text = "YOUR SCORE: " + score;
 
         gameOverPanel.SetActive(true);
         GameOverUI.SetActive(false);

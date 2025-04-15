@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject WinScreen;
     public string sceneToLoad;
     public int EnemiesKilled = 0;
-    private int score = 0;
+    public int score = 0;
     public SpawnManager spawnManager;
     public OrbScript orbScript;
 
