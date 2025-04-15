@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject WinScreen;
     public string sceneToLoad;
     public int EnemiesKilled = 0;
-    private int score = 0;
+    public int score = 0;
     public SpawnManager spawnManager;
     public OrbScript orbScript;
 
@@ -25,6 +25,7 @@ public class ScoreManager : MonoBehaviour
 
     public GunMovement weaponScript;
     public Transform player;
+    public GameObject SaveScoreUI;
 
 
     //Next, we will "import" all the texts needed for the WinStats
@@ -41,7 +42,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
-
+        SaveScoreUI.SetActive(false);
         UpdateEnemyText();
         scoreText.text = "Score: " + score;
     }
@@ -73,7 +74,7 @@ public class ScoreManager : MonoBehaviour
         EnemiesKilled += 1;
         UpdateEnemyText();
 
-        if (enemyValue == 9) //Wave Two begins, when there are 9 alive enemies left
+        if (enemyValue == 10) //Wave Two begins, when there are 9 alive enemies left
         {
             StartCoroutine(spawnManager.WaveTwo());
         }
@@ -86,9 +87,16 @@ public class ScoreManager : MonoBehaviour
         if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
         {
             Time.timeScale = 0f;
-            WinScreen.SetActive(true);
-            WinStats();
+            StartCoroutine(VictoryWait(2f));
         }
+    }
+
+    private IEnumerator VictoryWait(float waitTime)
+    {
+        yield return new WaitForSecondsRealtime(waitTime);
+        Time.timeScale = 0f;
+        WinScreen.SetActive(true);
+        WinStats();
     }
 
     public void AddScore(int points)
@@ -106,10 +114,17 @@ public class ScoreManager : MonoBehaviour
         enemyCounter.text = "Enemies left: " + enemyValue;
     }
 
+    public void NextButtonPressed()
+    {
+        WinScreen.SetActive(false);
+        SaveScoreUI.SetActive(true);
+    }
+
 
 
     public void MenuButtonPressed()
     {
+
         Debug.Log("Nappia painettu");
         StartCoroutine(FadeOutAndLoad(2f));
     }
@@ -149,6 +164,8 @@ public class ScoreManager : MonoBehaviour
 
     public void WinStats()
     {
+
+        SaveScoreUI.SetActive(true);
         isRunning = false;
         float WinTime = timer;
         TimeText.text = "Time passed: " + WinTime.ToString("F1");
@@ -178,5 +195,7 @@ public class ScoreManager : MonoBehaviour
 
         float TotalPoints = TimePoints + KillPoints + HPPoints + AccuracyPoints;
         TotalScore.text = "Total score: " + TotalPoints.ToString("F0");
+
+        score = (int)TotalPoints; //Päivitetään ScoreManagerin score muuttuja, jotta se voidaan tallentaa leaderboardille
     }
 }

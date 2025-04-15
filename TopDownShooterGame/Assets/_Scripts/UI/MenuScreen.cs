@@ -4,12 +4,15 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine.UIElements;
 
-public class ScreenFader : MonoBehaviour
+public class MenuScreen : MonoBehaviour
 {
     public UnityEngine.UI.Image fadeImage;
     public string sceneToLoad; // Scene name set in Inspector
     public TextFader textFader;
     public UnityEngine.UI.Button PlayButton;
+    public LeaderboardManager leaderboardManager;
+    public GameObject MenuScreenUI;
+    public GameObject LeaderboardUI;
 
     void Start()
     {
@@ -78,5 +81,19 @@ public class ScreenFader : MonoBehaviour
 
         // Load the next scene
         SceneManager.LoadScene(sceneToLoad);
+    }
+
+    public void LBbuttonPressed()
+    {
+        MenuScreenUI.SetActive(false);
+        LeaderboardUI.SetActive(true);
+        leaderboardManager.ShowLeaderboardUI();
+    }
+
+    public void BackButtonPressed()
+    {
+        MenuScreenUI.SetActive(true);
+        LeaderboardUI.SetActive(false);
+        
     }
 }
