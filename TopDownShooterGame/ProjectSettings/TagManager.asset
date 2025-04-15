@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Tree
   - Obstacle
+  - Audio
   layers:
   - Default
   - TransparentFX

@@ -33,7 +33,7 @@ public class EnemyShooter : MonoBehaviour
     bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
     // Set bullet velocity
     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-    audioManager.PlaySFX(audioManager.shootSFX);
+    audioManager.PlaySFX2(audioManager.enemyShootSFX);
         if (rb != null)
     {
         rb.linearVelocity = direction * fireForce;
