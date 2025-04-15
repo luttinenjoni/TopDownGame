@@ -11,12 +11,17 @@ public class PlayerMovement : MonoBehaviour
     public Camera cam;
 
     Vector2 movement;
+    AudioManager audioManager;
 
     private const string horizontal = "Horizontal";
     private const string vertical = "Vertical";
 
 
-    // Update is called once per frame
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -29,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Time.timeScale == 0f) //Jos peli on pausella, älä ammu.
                 return;
+            audioManager.PlaySFX(audioManager.shootSFX);
             weapon.Attack();
         }
 

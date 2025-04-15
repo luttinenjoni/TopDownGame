@@ -8,6 +8,13 @@ public class EnemyShooter : MonoBehaviour
     public float fireRate = 1f; // Time between shots
     private Transform player;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform; // Find player by tag
@@ -26,7 +33,8 @@ public class EnemyShooter : MonoBehaviour
     bullet.transform.rotation = Quaternion.Euler(0, 0, angle);
     // Set bullet velocity
     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-    if (rb != null)
+    audioManager.PlaySFX(audioManager.shootSFX);
+        if (rb != null)
     {
         rb.linearVelocity = direction * fireForce;
     }
