@@ -42,6 +42,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
+        WinScreen.SetActive(false); //Hide WinScreen at start
         SaveScoreUI.SetActive(false);
         UpdateEnemyText();
         scoreText.text = "Score: " + score;
@@ -86,17 +87,18 @@ public class ScoreManager : MonoBehaviour
 
         if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
         {
-            Time.timeScale = 0f;
-            StartCoroutine(VictoryWait(2f));
+            StartCoroutine(Victory(2f));
         }
     }
 
-    private IEnumerator VictoryWait(float waitTime)
+    IEnumerator Victory(float duration)
     {
-        yield return new WaitForSecondsRealtime(waitTime);
-        Time.timeScale = 0f;
-        WinScreen.SetActive(true);
+        isRunning = false;
+        Time.timeScale = 0f; // Pause the game
+        yield return new WaitForSecondsRealtime(duration); // Wait for the specified duration
+        WinScreen.gameObject.SetActive(true);
         WinStats();
+        SaveScoreUI.gameObject.SetActive(true);
     }
 
     public void AddScore(int points)

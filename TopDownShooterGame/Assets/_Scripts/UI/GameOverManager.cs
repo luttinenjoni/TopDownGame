@@ -21,7 +21,6 @@ public class GameOverManager : MonoBehaviour
 
     private void Start()
     {
-        WinScreen.SetActive(false); //Hide WinScreen at start
         audioSource = GetComponent<AudioSource>();
         Color color = BlackFade.color;
         color.a = 0f;
