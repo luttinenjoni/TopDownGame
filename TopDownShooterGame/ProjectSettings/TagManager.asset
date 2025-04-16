@@ -55,6 +55,9 @@ TagManager:
   - name: Props
     uniqueID: 3939451751
     locked: 0
+  - name: Ruins
+    uniqueID: 1707278071
+    locked: 0
   - name: player
     uniqueID: 3993408433
     locked: 0
