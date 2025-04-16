@@ -12,6 +12,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip shootSFX;
     public AudioClip enemyShootSFX;
     public AudioClip footstepSFX;
+    public AudioClip playClickSFX;
+    public AudioClip clickSFX;
 
     private void Start()
     {

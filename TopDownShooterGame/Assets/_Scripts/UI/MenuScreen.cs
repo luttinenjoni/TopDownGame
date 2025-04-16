@@ -14,6 +14,13 @@ public class MenuScreen : MonoBehaviour
     public GameObject MenuScreenUI;
     public GameObject LeaderboardUI;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Start()
     {
         PlayButton.interactable = false; //PlayButton is not interactable before fadein
@@ -36,6 +43,7 @@ public class MenuScreen : MonoBehaviour
 
     public void OnFadeOutButtonPressed()
     {
+        audioManager.PlaySFX2(audioManager.playClickSFX);
         // Call this from a UI Button
         StartCoroutine(FadeOutAndLoadScene(2f));
     }
@@ -85,13 +93,16 @@ public class MenuScreen : MonoBehaviour
 
     public void LBbuttonPressed()
     {
+        audioManager.PlaySFX2(audioManager.clickSFX);
         MenuScreenUI.SetActive(false);
         LeaderboardUI.SetActive(true);
         leaderboardManager.ShowLeaderboardUI();
+        
     }
 
     public void BackButtonPressed()
     {
+        audioManager.PlaySFX2(audioManager.clickSFX);
         MenuScreenUI.SetActive(true);
         LeaderboardUI.SetActive(false);
         
