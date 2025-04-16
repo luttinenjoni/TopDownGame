@@ -9,6 +9,12 @@ public class HealthScript : MonoBehaviour
     private Transform player;
     public GameOverManager gameOverManager;
     public GameObject healthItemPrefab;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Start()
     {
@@ -51,8 +57,8 @@ public class HealthScript : MonoBehaviour
                 {
                     Instantiate(healthItemPrefab, transform.position, Quaternion.identity);
                 }
+                audioManager.PlaySFX2(audioManager.enemyDieSFX);
                 Destroy(gameObject);
-
             }
             
         }

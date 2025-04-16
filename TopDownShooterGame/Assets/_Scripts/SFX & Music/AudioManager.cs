@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip playClickSFX;
     public AudioClip clickSFX;
     public AudioClip healthSFX;
+    public AudioClip enemyDieSFX;
 
     private void Start()
     {
