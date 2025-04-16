@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float footstepInterval = 0.2f;
     private float footstepTimer = 0f;
-
+    public float fireRate = 0.1f; // Time between shots in seconds
+    private float nextFireTime = 0f;
 
 
     private const string horizontal = "Horizontal";
@@ -47,15 +48,21 @@ public class PlayerMovement : MonoBehaviour
             footstepTimer = 0f; // Reset timer if not moving
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
-            if (Time.timeScale == 0f) //Jos peli on pausella, älä ammu.
+            if (Time.timeScale == 0f) // If the game is paused, don't shoot
                 return;
-            audioManager.PlaySFX(audioManager.shootSFX);
-            weapon.Attack();
+
+            // Check if enough time has passed since the last shot
+            if (Time.time >= nextFireTime)
+            {
+                audioManager.PlaySFX(audioManager.shootSFX);
+                weapon.Attack();
+                nextFireTime = Time.time + fireRate;
+            }
         }
 
-    }
+}
 
     void FixedUpdate()
     {

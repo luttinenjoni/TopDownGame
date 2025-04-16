@@ -47,7 +47,7 @@ public class HealthScript : MonoBehaviour
                 }
                 ScoreManager.Instance.EnemyKilled();
 
-                if (Random.value < 0.15f && healthItemPrefab != null)
+                if (Random.value < 1f && healthItemPrefab != null)
                 {
                     Instantiate(healthItemPrefab, transform.position, Quaternion.identity);
                 }

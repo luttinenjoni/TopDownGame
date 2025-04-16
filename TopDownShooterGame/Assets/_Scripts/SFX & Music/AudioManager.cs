@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
     [SerializeField] AudioSource SFXSource2;
+    [SerializeField] AudioSource SFXSource3;
 
     [Header("Audio Clip")]
     public AudioClip menubg;
@@ -14,6 +15,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip footstepSFX;
     public AudioClip playClickSFX;
     public AudioClip clickSFX;
+    public AudioClip healthSFX;
 
     private void Start()
     {
@@ -28,6 +30,10 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX2(AudioClip clip)
     {
         SFXSource2.PlayOneShot(clip);
+    }
+    public void PlaySFX3(AudioClip clip)
+    {
+        SFXSource3.PlayOneShot(clip);
     }
 
 }
