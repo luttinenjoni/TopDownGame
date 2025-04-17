@@ -622,12 +622,15 @@ MonoBehaviour:
   musicSource: {fileID: 177562579}
   SFXSource: {fileID: 805359607}
   SFXSource2: {fileID: 1345341936}
+  SFXSource3: {fileID: 0}
   menubg: {fileID: 8300000, guid: 59c03a424b774d34c87ad8d69010d13c, type: 3}
   shootSFX: {fileID: 0}
   enemyShootSFX: {fileID: 0}
   footstepSFX: {fileID: 0}
   playClickSFX: {fileID: 8300000, guid: 0c117708cc4b7ed459f90df0d0696630, type: 3}
   clickSFX: {fileID: 8300000, guid: 3e6bbb15077305c418499026f32c3a18, type: 3}
+  healthSFX: {fileID: 0}
+  enemyDieSFX: {fileID: 0}
 --- !u!4 &393284912
 Transform:
   m_ObjectHideFlags: 0
@@ -974,6 +977,7 @@ GameObject:
   - component: {fileID: 583536198}
   - component: {fileID: 583536201}
   - component: {fileID: 583536202}
+  - component: {fileID: 583536203}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1016,9 +1020,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.07384988
     y: 0
-    width: 1
+    width: 0.8523003
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -1113,6 +1117,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetAspect: 1.7777778
+--- !u!114 &583536203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583536197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_AssetsPPU: 18
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_CropFrame: 4
+  m_GridSnapping: 1
+  m_FilterMode: 1
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &731836993
 GameObject:
   m_ObjectHideFlags: 0
