@@ -14,7 +14,9 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI enemyCounter;
     public TextMeshProUGUI scoreText;
     public GameObject WinScreen;
-    public string sceneToLoad;
+    public string MenuLoad;
+    public string NextLevel;
+    public int level = 1;
     public int EnemiesKilled = 0;
     public int score = 0;
     public SpawnManager spawnManager;
@@ -58,19 +60,26 @@ public class ScoreManager : MonoBehaviour
 
     private void Awake()
     {
-        // Singleton pattern to ensure only one ScoreManager exists
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject); // Persist across levels
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // Prevent duplicates
         }
+    }
+
+    public void NewLevelInit()
+    {
+
     }
 
     public void EnemyKilled()
     {
+        if (level == 1) //If the level is 1, we will start the game with 12 enemies
+        {
         enemyValue -= 1;
         EnemiesKilled += 1;
         UpdateEnemyText();
@@ -88,6 +97,8 @@ public class ScoreManager : MonoBehaviour
         if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
         {
             StartCoroutine(Victory(2f));
+        }
+
         }
     }
 
@@ -107,11 +118,11 @@ public class ScoreManager : MonoBehaviour
         UpdateScoreText();
     }
 
-    private void UpdateScoreText()
+    public void UpdateScoreText()
     {
         scoreText.text = "" + score;
     }
-    private void UpdateEnemyText()
+    public void UpdateEnemyText()
     {
         enemyCounter.text = "Enemies left: " + enemyValue;
     }
@@ -119,7 +130,10 @@ public class ScoreManager : MonoBehaviour
     public void NextButtonPressed()
     {
         WinScreen.SetActive(false);
-        SaveScoreUI.SetActive(true);
+        Time.timeScale = 1f; // Varmistetaan, että peli jatkuu normaalisti
+        level += 1; //Seuraavaan kenttään
+        NewLevelInit();
+        SceneManager.LoadScene(NextLevel); // Ladataan seuraava kenttä
     }
 
 
@@ -149,7 +163,7 @@ public class ScoreManager : MonoBehaviour
 
     color.a = 1f;
     BlackFade.color = color;
-    SceneManager.LoadScene(sceneToLoad);
+    SceneManager.LoadScene(MenuLoad);
 
     // Varmistetaan, että peli jatkuu normaalisti
     // Tämä on viimeinen kohta, missä Time.timeScale asetetaan takaisin 1

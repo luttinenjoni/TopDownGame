@@ -1023,7 +1023,7 @@ Camera:
     x: 0.07384988
     y: 0
     width: 0.8523003
-    height: 1
+    height: 1.0012642
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 202463562}
-  sceneToLoad: SampleScene
+  sceneToLoad: Level1
   textFader: {fileID: 132365636}
   PlayButton: {fileID: 544967699}
   leaderboardManager: {fileID: 437935348}
