@@ -7,7 +7,12 @@ public class OrbScript : MonoBehaviour
     public bool isRunning = false;
 
     public SpawnManager spawnManager;
-    public ScoreManager scoreManager;
+    private ScoreManager scoreManager;
+
+    void Start()
+    {
+        scoreManager = ScoreManager.Instance; //Get the ScoreManager instance
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         

@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9140441938463374418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1792029155388092228}
+  - component: {fileID: 476708390397535468}
+  m_Layer: 0
+  m_Name: SceneConnector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1792029155388092228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9140441938463374418}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.1259792, y: -1.3160657, z: 0.027047025}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &476708390397535468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9140441938463374418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7643548e39831094f9e301239e4da037, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyValue: 12
+  BlackFade: {fileID: 0}
+  enemyCounter: {fileID: 0}
+  scoreText: {fileID: 0}
+  WinScreen: {fileID: 0}
+  MenuLoad: Menu
+  NextLevel: Level2
+  level: 1
+  EnemiesKilled: 0
+  score: 0
+  spawnManager: {fileID: 0}
+  orbScript: {fileID: 0}
+  timer: 0
+  isRunning: 0
+  weaponScript: {fileID: 0}
+  player: {fileID: 0}
+  SaveScoreUI: {fileID: 0}
+  KillText: {fileID: 0}
+  TimeText: {fileID: 0}
+  HPText: {fileID: 0}
+  AccuracyText: {fileID: 0}
+  KillScore: {fileID: 0}
+  TimeScore: {fileID: 0}
+  HPScore: {fileID: 0}
+  AccuracyScore: {fileID: 0}
+  TotalScore: {fileID: 0}

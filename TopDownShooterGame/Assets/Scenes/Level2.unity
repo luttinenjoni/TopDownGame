@@ -1164,10 +1164,11 @@ MonoBehaviour:
   BlackFade: {fileID: 1623112207}
   gameOverPanel: {fileID: 1218352136}
   GameOverUI: {fileID: 843373189}
-  sceneToLoad: Menu
+  MenuSceneLoad: 
+  NextLevel: 
   WinScreen: {fileID: 1320264896}
   ScoreText: {fileID: 591766143}
-  scoreManager: {fileID: 2121219967}
+  scoreManager: {fileID: 0}
   fadeDuration: 2
   maxFadeAlpha: 0.75
 --- !u!1 &448991252
@@ -1333,7 +1334,6 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
-  - component: {fileID: 519420034}
   - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
@@ -1421,10 +1421,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.661017
+    x: 0.66222763
     y: 0
-    width: 1.3408663
-    height: 1.5752213
+    width: 1.3387141
+    height: 1.5707071
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1474,21 +1474,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetAspect: 1.777778
---- !u!114 &519420034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e062ba8af3a2ce47a609846cc033965, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1082886416}
-  tilemap: {fileID: 0}
-  smoothSpeed: 1
 --- !u!114 &519420035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2078,6 +2063,139 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1032145995
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: HPText
+      value: 
+      objectReference: {fileID: 1696462633}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1082886416}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: HPScore
+      value: 
+      objectReference: {fileID: 1891560520}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: KillText
+      value: 
+      objectReference: {fileID: 1096740766}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: TimeText
+      value: 
+      objectReference: {fileID: 1695998134}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: BlackFade
+      value: 
+      objectReference: {fileID: 1623112207}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: KillScore
+      value: 
+      objectReference: {fileID: 1698184189}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: TimeScore
+      value: 
+      objectReference: {fileID: 899041333}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: WinScreen
+      value: 
+      objectReference: {fileID: 1320264896}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: orbScript
+      value: 
+      objectReference: {fileID: 1044022659}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 2102128616}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: TotalScore
+      value: 
+      objectReference: {fileID: 935611106}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: enemyValue
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: SaveScoreUI
+      value: 
+      objectReference: {fileID: 2138292537}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: AccuracyText
+      value: 
+      objectReference: {fileID: 1648819191}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: enemyCounter
+      value: 
+      objectReference: {fileID: 897454900}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: spawnManager
+      value: 
+      objectReference: {fileID: 1757703022}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: weaponScript
+      value: 
+      objectReference: {fileID: 1087420102}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: AccuracyScore
+      value: 
+      objectReference: {fileID: 388166035}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.1259792
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.3160657
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.027047025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140441938463374418, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_Name
+      value: SceneConnector
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
 --- !u!1 &1044022658 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7327840367263377116, guid: 785f75e6b4fa2a04793d4846e95336d8, type: 3}
@@ -2098,7 +2216,6 @@ MonoBehaviour:
   timer: 0
   isRunning: 0
   spawnManager: {fileID: 1757703022}
-  scoreManager: {fileID: 2121219967}
 --- !u!1 &1048341794
 GameObject:
   m_ObjectHideFlags: 0
@@ -3934,75 +4051,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102128614}
   m_CullTransparentMesh: 1
---- !u!1 &2121219966
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2121219968}
-  - component: {fileID: 2121219967}
-  m_Layer: 0
-  m_Name: Level0Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2121219967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121219966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f64583c0c2107f54596c9e935f71c1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyValue: 12
-  BlackFade: {fileID: 1623112207}
-  enemyCounter: {fileID: 897454900}
-  scoreText: {fileID: 2102128616}
-  WinScreen: {fileID: 1320264896}
-  MenuLoad: Menu
-  NextLevel: 
-  EnemiesKilled: 0
-  score: 0
-  spawnManager: {fileID: 1757703022}
-  orbScript: {fileID: 1044022659}
-  timer: 0
-  isRunning: 0
-  weaponScript: {fileID: 1087420102}
-  player: {fileID: 1082886416}
-  SaveScoreUI: {fileID: 2138292537}
-  KillText: {fileID: 1096740766}
-  TimeText: {fileID: 1695998134}
-  HPText: {fileID: 1696462633}
-  AccuracyText: {fileID: 1648819191}
-  KillScore: {fileID: 1698184189}
-  TimeScore: {fileID: 899041333}
-  HPScore: {fileID: 1891560520}
-  AccuracyScore: {fileID: 388166035}
-  TotalScore: {fileID: 935611106}
---- !u!4 &2121219968
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121219966}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3044894, y: -1.012838, z: -0.061785977}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2138292537 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4499454740324490399, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
@@ -4055,7 +4103,7 @@ PrefabInstance:
     - target: {fileID: 5595112385845910124, guid: 6777ed08f4488704eb68f1f2fbb4007b, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 2121219967}
+      objectReference: {fileID: 0}
     - target: {fileID: 5595112385845910124, guid: 6777ed08f4488704eb68f1f2fbb4007b, type: 3}
       propertyPath: leaderboardManager
       value: 
@@ -4245,7 +4293,7 @@ PrefabInstance:
     - target: {fileID: 523607445582809064, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2121219967}
+      objectReference: {fileID: 0}
     - target: {fileID: 523607445582809064, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextButtonPressed
@@ -4257,7 +4305,7 @@ PrefabInstance:
     - target: {fileID: 1307434854636457517, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 2121219967}
+      objectReference: {fileID: 0}
     - target: {fileID: 1307434854636457517, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: playerNameInput
       value: 
@@ -4423,7 +4471,7 @@ PrefabInstance:
     - target: {fileID: 9092365026026735502, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: scoreManager
       value: 
-      objectReference: {fileID: 2121219967}
+      objectReference: {fileID: 0}
     - target: {fileID: 9092365026026735502, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: gameOverPanel
       value: 
@@ -4444,7 +4492,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1605102510}
-  - {fileID: 2121219968}
   - {fileID: 1082886416}
   - {fileID: 1796236536}
   - {fileID: 1967186837}
@@ -4453,3 +4500,4 @@ SceneRoots:
   - {fileID: 762620606}
   - {fileID: 1048341795}
   - {fileID: 1603711895}
+  - {fileID: 1032145995}

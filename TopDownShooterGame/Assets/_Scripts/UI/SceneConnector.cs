@@ -67,6 +67,7 @@ public class SceneUIConnector : MonoBehaviour
             ScoreManager.Instance.TotalScore = TotalScore;
 
             ScoreManager.Instance.UpdateEnemyText();
+            ScoreManager.Instance.InitLevelUI();
         }
     }
 }

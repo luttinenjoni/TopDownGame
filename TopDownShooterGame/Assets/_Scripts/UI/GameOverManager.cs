@@ -11,7 +11,8 @@ public class GameOverManager : MonoBehaviour
     public UnityEngine.UI.Image BlackFade;
     public GameObject gameOverPanel;
     public GameObject GameOverUI;
-    public string sceneToLoad;
+    public string MenuSceneLoad;
+    public string NextLevel;
     public GameObject WinScreen;
 
     public TextMeshProUGUI ScoreText;
@@ -68,6 +69,13 @@ public class GameOverManager : MonoBehaviour
 
     }
 
+    public void NextButtonPressed()
+    {
+        GameOverUI.SetActive(false);
+        Time.timeScale = 1f; // Varmistetaan, että peli jatkuu normaalisti
+        SceneManager.LoadScene(NextLevel); // Ladataan seuraava kenttä
+    }
+
     public void MenuButtonPressed()
     {
         BlackFade.gameObject.SetActive(true);
@@ -97,7 +105,7 @@ public class GameOverManager : MonoBehaviour
     // Ladataan seuraava kohtaus
     // Tässä vaiheessa Time.timeScale on edelleen 0
     // Pysytään pausella, kunnes kohtaus ladataan
-    SceneManager.LoadScene(sceneToLoad);
+    SceneManager.LoadScene(MenuSceneLoad);
 
     // Varmistetaan, että peli jatkuu normaalisti
     // Tämä on viimeinen kohta, missä Time.timeScale asetetaan takaisin 1

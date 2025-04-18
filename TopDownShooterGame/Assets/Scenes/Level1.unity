@@ -2184,7 +2184,8 @@ MonoBehaviour:
   BlackFade: {fileID: 1623112207}
   gameOverPanel: {fileID: 1218352136}
   GameOverUI: {fileID: 843373189}
-  sceneToLoad: Menu
+  MenuSceneLoad: Menu
+  NextLevel: Level2
   WinScreen: {fileID: 1320264896}
   ScoreText: {fileID: 591766143}
   scoreManager: {fileID: 0}
@@ -5156,10 +5157,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.07384988
+    x: 0.66222763
     y: 0
-    width: 0.8523003
-    height: 1
+    width: 1.3387141
+    height: 1.5707071
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -7503,7 +7504,6 @@ MonoBehaviour:
   timer: 0
   isRunning: 0
   spawnManager: {fileID: 1757703022}
-  scoreManager: {fileID: 0}
 --- !u!1 &1048341794
 GameObject:
   m_ObjectHideFlags: 0
@@ -9592,76 +9592,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &1624061070
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1624061072}
-  - component: {fileID: 1624061071}
-  m_Layer: 0
-  m_Name: SceneConnector
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1624061071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624061070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7643548e39831094f9e301239e4da037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyValue: 12
-  BlackFade: {fileID: 1623112207}
-  enemyCounter: {fileID: 897454900}
-  scoreText: {fileID: 2102128616}
-  WinScreen: {fileID: 1320264896}
-  MenuLoad: Menu
-  NextLevel: Level2
-  level: 1
-  EnemiesKilled: 0
-  score: 0
-  spawnManager: {fileID: 1757703022}
-  orbScript: {fileID: 1044022659}
-  timer: 0
-  isRunning: 0
-  weaponScript: {fileID: 1087420102}
-  player: {fileID: 1082886416}
-  SaveScoreUI: {fileID: 2138292537}
-  KillText: {fileID: 1096740766}
-  TimeText: {fileID: 1695998134}
-  HPText: {fileID: 1696462633}
-  AccuracyText: {fileID: 1648819191}
-  KillScore: {fileID: 1698184189}
-  TimeScore: {fileID: 899041333}
-  HPScore: {fileID: 1891560520}
-  AccuracyScore: {fileID: 388166035}
-  TotalScore: {fileID: 935611106}
---- !u!4 &1624061072
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624061070}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1259792, y: -1.3160657, z: 0.027047025}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1648819191 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4104176828663146398, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
@@ -13439,6 +13369,135 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+--- !u!1001 &4963416220068150623
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: HPText
+      value: 
+      objectReference: {fileID: 1696462633}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1082886416}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: HPScore
+      value: 
+      objectReference: {fileID: 1891560520}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: KillText
+      value: 
+      objectReference: {fileID: 1096740766}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: TimeText
+      value: 
+      objectReference: {fileID: 1695998134}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: BlackFade
+      value: 
+      objectReference: {fileID: 1623112207}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: KillScore
+      value: 
+      objectReference: {fileID: 1698184189}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: TimeScore
+      value: 
+      objectReference: {fileID: 899041333}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: WinScreen
+      value: 
+      objectReference: {fileID: 1320264896}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: orbScript
+      value: 
+      objectReference: {fileID: 1044022659}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 2102128616}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: TotalScore
+      value: 
+      objectReference: {fileID: 935611106}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: SaveScoreUI
+      value: 
+      objectReference: {fileID: 2138292537}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: AccuracyText
+      value: 
+      objectReference: {fileID: 1648819191}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: enemyCounter
+      value: 
+      objectReference: {fileID: 897454900}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: spawnManager
+      value: 
+      objectReference: {fileID: 1757703022}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: weaponScript
+      value: 
+      objectReference: {fileID: 1087420102}
+    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: AccuracyScore
+      value: 
+      objectReference: {fileID: 388166035}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.1259792
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.3160657
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.027047025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792029155388092228, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9140441938463374418, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
+      propertyPath: m_Name
+      value: SceneConnector
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
 --- !u!1001 &6034586631441416238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13458,14 +13517,14 @@ PrefabInstance:
     - target: {fileID: 523607445582809064, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 394692521}
     - target: {fileID: 523607445582809064, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NextButtonPressed
       objectReference: {fileID: 0}
     - target: {fileID: 523607445582809064, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ScoreManager, Assembly-CSharp
+      value: GameOverManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1307434854636457517, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: scoreManager
@@ -13664,4 +13723,4 @@ SceneRoots:
   - {fileID: 1757703023}
   - {fileID: 346916953}
   - {fileID: 762620606}
-  - {fileID: 1624061072}
+  - {fileID: 4963416220068150623}

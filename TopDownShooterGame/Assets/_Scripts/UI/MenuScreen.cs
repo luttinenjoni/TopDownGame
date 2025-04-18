@@ -23,6 +23,7 @@ public class MenuScreen : MonoBehaviour
 
     void Start()
     {
+        GameData.SavedScore = 0; // Reset the saved score at the start of the game
         PlayButton.interactable = false; //PlayButton is not interactable before fadein
         // Black screen on start, then fade in
         StartCoroutine(FadeInScene(2f));

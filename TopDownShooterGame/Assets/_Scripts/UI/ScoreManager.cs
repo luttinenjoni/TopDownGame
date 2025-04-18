@@ -41,10 +41,16 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI AccuracyScore;
     public TextMeshProUGUI TotalScore;
 
-
     private void Start()
     {
+        InitLevelUI();
+    }
+
+
+    public void InitLevelUI()
+    {
         WinScreen.SetActive(false); //Hide WinScreen at start
+        score = GameData.SavedScore; //Get the score from GameData
         SaveScoreUI.SetActive(false);
         UpdateEnemyText();
         scoreText.text = "Score: " + score;
@@ -213,5 +219,6 @@ public class ScoreManager : MonoBehaviour
         TotalScore.text = "Total score: " + TotalPoints.ToString("F0");
 
         score = (int)TotalPoints; //Päivitetään ScoreManagerin score muuttuja, jotta se voidaan tallentaa leaderboardille
+        GameData.SavedScore += score;
     }
 }
