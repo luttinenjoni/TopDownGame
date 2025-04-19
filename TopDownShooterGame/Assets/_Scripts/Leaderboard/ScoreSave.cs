@@ -14,6 +14,7 @@ public class SaveScore : MonoBehaviour
 
     void Start()
     {
+        scoreManager = ScoreManager.Instance; // Get the ScoreManager instance
         score = scoreManager.score;
         playerName = playerNameInput.text;
     }

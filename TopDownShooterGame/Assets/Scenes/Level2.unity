@@ -1164,8 +1164,8 @@ MonoBehaviour:
   BlackFade: {fileID: 1623112207}
   gameOverPanel: {fileID: 1218352136}
   GameOverUI: {fileID: 843373189}
-  MenuSceneLoad: 
-  NextLevel: 
+  MenuSceneLoad: Menu
+  NextLevel: Level3
   WinScreen: {fileID: 1320264896}
   ScoreText: {fileID: 591766143}
   scoreManager: {fileID: 0}

@@ -22,6 +22,7 @@ public class GameOverManager : MonoBehaviour
 
     private void Start()
     {
+        scoreManager = ScoreManager.Instance; // Get the ScoreManager instance
         audioSource = GetComponent<AudioSource>();
         Color color = BlackFade.color;
         color.a = 0f;
