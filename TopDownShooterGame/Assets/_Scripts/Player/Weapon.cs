@@ -19,7 +19,11 @@ public class GunMovement : MonoBehaviour
 
         GunMovement gunMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<GunMovement>();
 
-        GameObject bullet = Instantiate(BulletPrefab, firePoint.position, firePoint.rotation);
+        Vector2 directionToMouse = ((Vector2)mousePos - (Vector2)firePoint.position).normalized;
+        Vector2 spawnPos = (Vector2)firePoint.position + directionToMouse * 0.3f; // 0.3f is the offset distance
+
+        GameObject bullet = Instantiate(BulletPrefab, spawnPos, firePoint.rotation);
+        // Set the bullet's direction to the direction from the fire point to the mouse position
         // If we found the GunMovement script, assign it to the bullet
         if (gunMovement != null)
         {
