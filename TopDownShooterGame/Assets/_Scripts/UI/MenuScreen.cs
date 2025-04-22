@@ -13,6 +13,7 @@ public class MenuScreen : MonoBehaviour
     public LeaderboardManager leaderboardManager;
     public GameObject MenuScreenUI;
     public GameObject LeaderboardUI;
+    public GameObject OptionsUI;
 
     AudioManager audioManager;
 
@@ -28,6 +29,7 @@ public class MenuScreen : MonoBehaviour
         // Black screen on start, then fade in
         StartCoroutine(FadeInScene(2f));
         StartCoroutine(FadeSequence());
+        OptionsUI.SetActive(false);
     }
 
     private IEnumerator FadeSequence()
@@ -97,8 +99,19 @@ public class MenuScreen : MonoBehaviour
         audioManager.PlaySFX2(audioManager.clickSFX);
         MenuScreenUI.SetActive(false);
         LeaderboardUI.SetActive(true);
+        OptionsUI.SetActive(false);
         leaderboardManager.ShowLeaderboardUI();
         
+    }
+
+    public void OptionsbuttonPressed()
+    {
+        audioManager.PlaySFX2(audioManager.clickSFX);
+        MenuScreenUI.SetActive(false);
+        LeaderboardUI.SetActive(false);
+        OptionsUI.SetActive(true);
+        
+
     }
 
     public void BackButtonPressed()
@@ -106,6 +119,7 @@ public class MenuScreen : MonoBehaviour
         audioManager.PlaySFX2(audioManager.clickSFX);
         MenuScreenUI.SetActive(true);
         LeaderboardUI.SetActive(false);
-        
+        OptionsUI.SetActive(false);
+
     }
 }
