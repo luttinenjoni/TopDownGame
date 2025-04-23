@@ -14,6 +14,8 @@ public class MenuScreen : MonoBehaviour
     public GameObject MenuScreenUI;
     public GameObject LeaderboardUI;
     public GameObject OptionsUI;
+    public GameObject FadeUI;
+    public DialogueManager dialogueManager;
 
     AudioManager audioManager;
 
@@ -70,10 +72,11 @@ public class MenuScreen : MonoBehaviour
         color.a = 0f;
         fadeImage.color = color;
         PlayButton.interactable = true; //PlayButton is interactable after fadein
+        FadeUI.gameObject.SetActive(false); // Hide the fade image after fading out
     }
-
     IEnumerator FadeOutAndLoadScene(float duration)
     {
+        FadeUI.gameObject.SetActive(true); // Show the fade image before fading out
         float elapsed = 0f;
         Color color = fadeImage.color;
         color.a = 0f;
@@ -90,8 +93,11 @@ public class MenuScreen : MonoBehaviour
         color.a = 1f;
         fadeImage.color = color;
 
-        // Load the next scene
-        SceneManager.LoadScene(sceneToLoad);
+        dialogueManager.StartDialogue(
+            "A curious and brave girl ventures to investigate the glow on her own only to find an ancient power of destruction!\n\n" +
+            "Suddenly guardians of this power from the past appear and try to destroy her.\n\n" +
+            "She has only one option and that is to fight!"
+        );
     }
 
     public void LBbuttonPressed()

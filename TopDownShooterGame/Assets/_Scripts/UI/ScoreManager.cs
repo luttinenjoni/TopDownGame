@@ -43,6 +43,12 @@ public class ScoreManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f; // Make sure the game is running at normal speed
+        string currentScene = SceneManager.GetActiveScene().name;
+        if (currentScene == "Menu")
+        {
+            return;
+        }
         InitLevelUI();
     }
 
