@@ -2100,10 +2100,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1698184189}
     - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
-      propertyPath: NextLevel
-      value: Level3
-      objectReference: {fileID: 0}
-    - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
       propertyPath: TimeScore
       value: 
       objectReference: {fileID: 899041333}
@@ -2125,7 +2121,7 @@ PrefabInstance:
       objectReference: {fileID: 935611106}
     - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
       propertyPath: enemyValue
-      value: 2
+      value: 666
       objectReference: {fileID: 0}
     - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
       propertyPath: SaveScoreUI
