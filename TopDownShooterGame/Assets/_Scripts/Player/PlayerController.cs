@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private float footstepTimer = 0f;
     public float fireRate = 0.1f; // Time between shots in seconds
     private float nextFireTime = 0f;
+    public bool alive = true; // Player's alive status
 
 
     private const string horizontal = "Horizontal";
@@ -28,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (!alive) // If the player is not alive, do not process input
+            return;
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         

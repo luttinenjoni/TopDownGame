@@ -42,6 +42,7 @@ public class HealthScript : MonoBehaviour
 
             if (gameObject.CompareTag("Player"))
             {
+                player.GetComponent<PlayerMovement>().alive = false; //Pelaaja kuolee
                 PlayerDies();
             }
 
