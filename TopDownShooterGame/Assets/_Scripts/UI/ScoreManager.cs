@@ -221,7 +221,7 @@ public class ScoreManager : MonoBehaviour
         AccuracyScore.text = AccuracyPoints.ToString("F0");
 
 
-        float TotalPoints = TimePoints + KillPoints + HPPoints + AccuracyPoints;
+        float TotalPoints = TimePoints + KillPoints + HPPoints + AccuracyPoints + score;
         TotalScore.text = "Total score: " + TotalPoints.ToString("F0");
 
         score = (int)TotalPoints; //Päivitetään ScoreManagerin score muuttuja, jotta se voidaan tallentaa leaderboardille
