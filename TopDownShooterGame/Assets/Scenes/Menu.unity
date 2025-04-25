@@ -873,7 +873,7 @@ MonoBehaviour:
   SFXSource: {fileID: 805359607}
   SFXSource2: {fileID: 1345341936}
   SFXSource3: {fileID: 0}
-  menubg: {fileID: 8300000, guid: 59c03a424b774d34c87ad8d69010d13c, type: 3}
+  menubg: {fileID: 8300000, guid: 860b5954103839c47ae13a75a7b4a060, type: 3}
   shootSFX: {fileID: 0}
   enemyShootSFX: {fileID: 0}
   footstepSFX: {fileID: 0}
@@ -1270,10 +1270,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.66222763
+    x: 0
     y: 0
-    width: 1.3387141
-    height: 1.5707071
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
