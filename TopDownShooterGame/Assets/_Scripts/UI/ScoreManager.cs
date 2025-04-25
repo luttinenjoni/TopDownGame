@@ -2,7 +2,6 @@ using UnityEngine;
 using TMPro;
 using System.Net.NetworkInformation;
 using System.Collections;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
