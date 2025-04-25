@@ -15,6 +15,7 @@ public class MenuScreen : MonoBehaviour
     public GameObject LeaderboardUI;
     public GameObject OptionsUI;
     public GameObject FadeUI;
+    public GameObject SkipButton;
     public DialogueManager dialogueManager;
 
     AudioManager audioManager;
@@ -26,6 +27,7 @@ public class MenuScreen : MonoBehaviour
 
     void Start()
     {
+        SkipButton.SetActive(false); // Hide the skip button at the start
         GameData.SavedScore = 0; // Reset the saved score at the start of the game
         PlayButton.interactable = false; //PlayButton is not interactable before fadein
         // Black screen on start, then fade in
@@ -93,11 +95,19 @@ public class MenuScreen : MonoBehaviour
         color.a = 1f;
         fadeImage.color = color;
 
+        SkipButton.SetActive(true); // Show the skip button after fading out
+
         dialogueManager.StartDialogue(
             "A curious and brave girl ventures to investigate the glow on her own only to find an ancient power of destruction!\n\n" +
             "Suddenly guardians of this power from the past appear and try to destroy her.\n\n" +
             "She has only one option and that is to fight!"
         );
+    }
+
+    public void SkipButtonPressed()
+    {
+        audioManager.PlaySFX2(audioManager.clickSFX);
+        SceneManager.LoadScene("Level1"); // Load the scene directly when the skip button is pressed
     }
 
     public void LBbuttonPressed()

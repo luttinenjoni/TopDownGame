@@ -4,9 +4,11 @@ public class PauseToggle : MonoBehaviour
 {
     private bool isPaused = false;
     public GameObject pauseMenuUI; // Assign your pause menu UI in the Inspector
+    public GameObject OptionsUI;
 
     void Start()
     {
+        OptionsUI.SetActive(false); // Hide options UI at the start
         // Initialize the game state
         isPaused = false;
         pauseMenuUI.SetActive(false); // Hide pause menu UI at the start
@@ -35,5 +37,16 @@ public class PauseToggle : MonoBehaviour
             Debug.Log("Game Resumed");
             pauseMenuUI.SetActive(false); // Hide pause menu UI
         }
+    }
+    public void OptionsPressed()
+    {
+        OptionsUI.SetActive(true); // Show options UI
+        pauseMenuUI.SetActive(false); // Hide pause menu UI
+    }
+
+    public void BackToPauseMenu()
+    {
+        OptionsUI.SetActive(false); // Hide options UI
+        pauseMenuUI.SetActive(true); // Show pause menu UI
     }
 }
