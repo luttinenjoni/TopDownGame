@@ -6770,7 +6770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.050980393, g: 0.105882354, b: 0.16470589, a: 0.47058824}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6964,6 +6964,26 @@ PrefabInstance:
     - target: {fileID: 817989736916339061, guid: bd4164d41fb08ba4faa09a5621330179, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 852209320597390871, guid: bd4164d41fb08ba4faa09a5621330179, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 394692521}
+    - target: {fileID: 852209320597390871, guid: bd4164d41fb08ba4faa09a5621330179, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MenuButtonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 852209320597390871, guid: bd4164d41fb08ba4faa09a5621330179, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOverManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8222100620226628822, guid: bd4164d41fb08ba4faa09a5621330179, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 394692522}
+    - target: {fileID: 8222100620226628822, guid: bd4164d41fb08ba4faa09a5621330179, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TogglePause
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8635,7 +8655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 108687439801012674, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 154428843464613452, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: m_Name
@@ -8815,6 +8835,10 @@ PrefabInstance:
       propertyPath: BlackFade
       value: 
       objectReference: {fileID: 1623112207}
+    - target: {fileID: 9092365026026735502, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
+      propertyPath: NextLevel
+      value: Level3
+      objectReference: {fileID: 0}
     - target: {fileID: 9092365026026735502, guid: b5e28ade24c8f894db8db1660bf0fc9b, type: 3}
       propertyPath: GameOverUI
       value: 
