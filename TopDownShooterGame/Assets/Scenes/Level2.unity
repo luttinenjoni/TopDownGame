@@ -1351,6 +1351,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420035}
+  - component: {fileID: 519420036}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1437,10 +1438,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.07384988
     y: 0
-    width: 0.9996677
-    height: 0.9994094
+    width: 0.8523003
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1514,6 +1515,21 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!114 &519420036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e062ba8af3a2ce47a609846cc033965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1082886416}
+  tilemap: {fileID: 1931382625}
+  smoothSpeed: 0.125
 --- !u!1 &525620358
 GameObject:
   m_ObjectHideFlags: 0

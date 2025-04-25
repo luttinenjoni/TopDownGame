@@ -38,6 +38,12 @@ public class SceneUIConnector : MonoBehaviour
 
     void Start()
     {
+        string currentScene = SceneManager.GetActiveScene().name;
+        if (currentScene == "Level2" || currentScene == "Level3")
+        {
+            isRunning = true; // Start the timer if the scene is Level2 or Level3
+        }
+
         if (ScoreManager.Instance != null)
         {
             ScoreManager.Instance.enemyValue = enemyValue;
@@ -69,13 +75,6 @@ public class SceneUIConnector : MonoBehaviour
 
             ScoreManager.Instance.UpdateEnemyText();
             ScoreManager.Instance.InitLevelUI();
-        }
-
-        string currentScene = SceneManager.GetActiveScene().name;
-        if (currentScene == "Level2" || currentScene == "Level3")
-        {
-            isRunning = true; // Start the timer if the scene is Level2 or Level3
-            ScoreManager.Instance.isRunning = true; // Start the timer in ScoreManager
         }
     }
 }
