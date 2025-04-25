@@ -43,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Kamera
+    uniqueID: 1130685675
+    locked: 0
   - name: Ground
     uniqueID: 351757055
     locked: 0
