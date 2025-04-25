@@ -92,24 +92,37 @@ public class ScoreManager : MonoBehaviour
     {
         if (level == 1) //If the level is 1, we will start the game with 12 enemies
         {
-        enemyValue -= 1;
-        EnemiesKilled += 1;
-        UpdateEnemyText();
+            enemyValue -= 1;
+            EnemiesKilled += 1;
+            UpdateEnemyText();
 
-        if (enemyValue == 10) //Wave Two begins, when there are 9 alive enemies left
-        {
-            StartCoroutine(spawnManager.WaveTwo());
+            if (enemyValue == 10) //Wave Two begins, when there are 9 alive enemies left
+            {
+                StartCoroutine(spawnManager.L1W2());
+            }
+
+            if (enemyValue == 5)
+            {
+                StartCoroutine(spawnManager.L1W3());
+            }
+
+            if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
+            {
+                StartCoroutine(Victory(2f));
+            }
+
         }
 
-        if (enemyValue == 5)
+        if (level == 2)
         {
-            StartCoroutine(spawnManager.WaveThree());
-        }
+            enemyValue -= 1;
+            EnemiesKilled += 1;
+            UpdateEnemyText();
 
-        if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
-        {
-            StartCoroutine(Victory(2f));
-        }
+            if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
+            {
+                StartCoroutine(Victory(2f));
+            }
 
         }
     }
@@ -221,7 +234,7 @@ public class ScoreManager : MonoBehaviour
         AccuracyScore.text = AccuracyPoints.ToString("F0");
 
 
-        float TotalPoints = TimePoints + KillPoints + HPPoints + AccuracyPoints + score;
+        float TotalPoints = TimePoints + HPPoints + AccuracyPoints + score;
         TotalScore.text = "Total score: " + TotalPoints.ToString("F0");
 
         score = (int)TotalPoints; //Päivitetään ScoreManagerin score muuttuja, jotta se voidaan tallentaa leaderboardille

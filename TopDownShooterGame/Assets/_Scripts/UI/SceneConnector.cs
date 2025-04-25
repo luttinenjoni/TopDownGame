@@ -42,6 +42,15 @@ public class SceneUIConnector : MonoBehaviour
         if (currentScene == "Level2" || currentScene == "Level3")
         {
             isRunning = true; // Start the timer if the scene is Level2 or Level3
+
+            if (currentScene == "Level2")
+            {
+                level = 2;
+            }
+            else if (currentScene == "Level3")
+            {
+                level = 3;
+            }
         }
 
         if (ScoreManager.Instance != null)
