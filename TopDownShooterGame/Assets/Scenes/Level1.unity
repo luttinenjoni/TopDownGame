@@ -4922,9 +4922,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.07384988
+    x: 0
     y: 0
-    width: 0.8523003
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -5928,7 +5928,7 @@ MonoBehaviour:
   SFXSource: {fileID: 1664615435}
   SFXSource2: {fileID: 133231229}
   SFXSource3: {fileID: 1890319924}
-  menubg: {fileID: 8300000, guid: 6e01c0425519e954d8461aae50ff100e, type: 3}
+  menubg: {fileID: 8300000, guid: 50a4d5c7abe15794fa0334c47034cf12, type: 3}
   shootSFX: {fileID: 8300000, guid: 8154f5e18ea48164e9cb0132012cf432, type: 3}
   enemyShootSFX: {fileID: 8300000, guid: 1ce7890406010c443a54576a00835e5a, type: 3}
   footstepSFX: {fileID: 8300000, guid: 37978bfc2423e08488ae265b81b126d0, type: 3}
@@ -9409,11 +9409,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShootingSpider: {fileID: 3943583639818203033, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
   MeleeBat: {fileID: 896242379505645022, guid: bd489fd9dd6aa4f43ae6be939221fe76, type: 3}
+  Skeleton: {fileID: 0}
   spawnPoints:
   - {fileID: 99278103}
   - {fileID: 163646286}
   - {fileID: 1321169801}
   - {fileID: 1965416566}
+  currentScene: 
 --- !u!4 &1757703023
 Transform:
   m_ObjectHideFlags: 0
