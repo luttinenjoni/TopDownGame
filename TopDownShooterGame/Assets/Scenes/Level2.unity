@@ -703,6 +703,7 @@ MonoBehaviour:
   healthBar: {fileID: 1505255633}
   gameOverManager: {fileID: 0}
   healthItemPrefab: {fileID: 6706415200545705683, guid: 972108c2f3a1da54c8810da3443b979e, type: 3}
+  BulletItemPrefab: {fileID: 0}
 --- !u!61 &141220210
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1392,9 +1393,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0625
+    x: 0
     y: 0
-    width: 0.8753087
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -10256,7 +10257,7 @@ MonoBehaviour:
   ani: {fileID: 1082886418}
   weapon: {fileID: 1087420102}
   cam: {fileID: 519420031}
-  moveSpeed: 8
+  moveSpeed: 6
   footstepInterval: 0.2
   fireRate: 0.5
   alive: 1
@@ -10422,6 +10423,7 @@ MonoBehaviour:
   healthBar: {fileID: 1494282216}
   gameOverManager: {fileID: 2093880961}
   healthItemPrefab: {fileID: 6706415200545705683, guid: 972108c2f3a1da54c8810da3443b979e, type: 3}
+  BulletItemPrefab: {fileID: 0}
 --- !u!95 &1082886418
 Animator:
   serializedVersion: 7
