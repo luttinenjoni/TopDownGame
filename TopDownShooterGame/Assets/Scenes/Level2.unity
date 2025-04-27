@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1814286357103416184, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2292293560207304280, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -274,6 +278,10 @@ PrefabInstance:
     - target: {fileID: 7386203158338078004, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: MenuSceneLoad
       value: Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442408012078249500, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7699373794895143657, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1384,9 +1392,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.0625
     y: 0
-    width: 1
+    width: 0.8753087
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -2571,7 +2579,7 @@ PrefabInstance:
       objectReference: {fileID: 444309159}
     - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
       propertyPath: enemyValue
-      value: 4
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
       propertyPath: SaveScoreUI
@@ -11364,6 +11372,7 @@ MonoBehaviour:
   ShootingSpider: {fileID: 3943583639818203033, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
   MeleeBat: {fileID: 896242379505645022, guid: bd489fd9dd6aa4f43ae6be939221fe76, type: 3}
   MeleeRaven: {fileID: 7070668820712965009, guid: a51c9694f20dc9b4eb192b81b4147201, type: 3}
+  PumpkinMan: {fileID: 3429667210101342529, guid: e5b8d00b9f2fea44fb5dc3da68fb9fa9, type: 3}
   Skeleton: {fileID: 1871394362455900029, guid: ee789602dae1d744c8bc0a2f92efe562, type: 3}
   spawnPoints:
   - {fileID: 99278103}
@@ -12877,13 +12886,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 5488221180092496615, guid: ee789602dae1d744c8bc0a2f92efe562, type: 3}
-      propertyPath: m_AnchorMax.x
+    - target: {fileID: 1871394362455900029, guid: ee789602dae1d744c8bc0a2f92efe562, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5488221180092496615, guid: ee789602dae1d744c8bc0a2f92efe562, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488221180092496615, guid: ee789602dae1d744c8bc0a2f92efe562, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8455152128547509079, guid: ee789602dae1d744c8bc0a2f92efe562, type: 3}
       propertyPath: m_LocalPosition.x

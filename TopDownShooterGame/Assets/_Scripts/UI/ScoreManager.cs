@@ -56,6 +56,7 @@ public class ScoreManager : MonoBehaviour
     {
         WinScreen.SetActive(false); //Hide WinScreen at start
         score = GameData.SavedScore; //Get the score from GameData
+        EnemiesKilled = 0; //Reset the number of enemies killed
         SaveScoreUI.SetActive(false);
         UpdateEnemyText();
         scoreText.text = "Score: " + score;
@@ -117,6 +118,21 @@ public class ScoreManager : MonoBehaviour
             enemyValue -= 1;
             EnemiesKilled += 1;
             UpdateEnemyText();
+
+            if (EnemiesKilled == 3)
+            {
+                StartCoroutine(spawnManager.L2W2());
+            }
+
+            if (EnemiesKilled == 6)
+            {
+                StartCoroutine(spawnManager.L2W3());
+            }
+
+            if (EnemiesKilled == 9)
+            {
+                StartCoroutine(spawnManager.L2W4());
+            }
 
             if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
             {

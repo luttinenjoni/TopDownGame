@@ -38,6 +38,17 @@ public class SceneUIConnector : MonoBehaviour
 
     void Start()
     {
+    
+        if (ScoreManager.Instance == null)
+        {
+            Debug.Log("No ScoreManager found, creating a new one!");
+
+            GameObject scoreManagerPrefab = Resources.Load<GameObject>("ScoreManager"); 
+            Instantiate(scoreManagerPrefab);
+        }
+    
+
+
         string currentScene = SceneManager.GetActiveScene().name;
         if (currentScene == "Level2" || currentScene == "Level3")
         {

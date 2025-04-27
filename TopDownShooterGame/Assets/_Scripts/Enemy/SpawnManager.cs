@@ -6,6 +6,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject ShootingSpider;
     public GameObject MeleeBat;
     public GameObject MeleeRaven;
+    public GameObject PumpkinMan;
     public GameObject Skeleton; // Add this line to declare the Skeleton prefab
     public Transform[] spawnPoints; // Size = 4, drag spawn points in inspector.
     public string currentScene;
@@ -127,20 +128,63 @@ public class SpawnManager : MonoBehaviour
         int randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
         Transform spawnPoint = spawnPoints[randomIndex];
 
-        Instantiate(MeleeBat, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(MeleeRaven, spawnPoint.position, spawnPoint.rotation);
 
         yield return new WaitForSeconds(3);
 
         randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
         spawnPoint = spawnPoints[randomIndex];
 
-        Instantiate(Skeleton, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(MeleeRaven, spawnPoint.position, spawnPoint.rotation);
+        yield return new WaitForSeconds(4);
         randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
         spawnPoint = spawnPoints[randomIndex];
 
         Instantiate(Skeleton, spawnPoint.position, spawnPoint.rotation);
-        yield return new WaitForSeconds(3);
     }
 
+    public IEnumerator L2W2()
+    {
+        yield return new WaitForSeconds(2);
+        Transform spawnPoint = spawnPoints[0];
+        Instantiate(Skeleton, spawnPoint.position, spawnPoint.rotation);
+        spawnPoint = spawnPoints[2];
+        Instantiate(Skeleton, spawnPoint.position, spawnPoint.rotation);
+        yield return new WaitForSeconds(3);
+        spawnPoint = spawnPoints[1];
+        Instantiate(MeleeRaven, spawnPoint.position, spawnPoint.rotation);
+    }
 
+    public IEnumerator L2W3()
+    {
+        yield return new WaitForSeconds(2);
+        int randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        Transform spawnPoint = spawnPoints[randomIndex];
+        Instantiate(PumpkinMan, spawnPoint.position, spawnPoint.rotation);
+        yield return new WaitForSeconds(5);
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
+        Instantiate(MeleeRaven, spawnPoint.position, spawnPoint.rotation);
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
+        Instantiate(MeleeRaven, spawnPoint.position, spawnPoint.rotation);
+        yield return new WaitForSeconds(10);
+
+    }
+
+    public IEnumerator L2W4()
+    {
+        yield return new WaitForSeconds(2);
+        int randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        Transform spawnPoint = spawnPoints[randomIndex];
+        Instantiate(PumpkinMan, spawnPoint.position, spawnPoint.rotation);
+        yield return new WaitForSeconds(5);
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
+        Instantiate(Skeleton, spawnPoint.position, spawnPoint.rotation);
+        yield return new WaitForSeconds(2);
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
+        Instantiate(MeleeRaven, spawnPoint.position, spawnPoint.rotation);
+    }
 }
