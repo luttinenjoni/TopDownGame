@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float footstepInterval = 0.2f;
     private float footstepTimer = 0f;
-    public float fireRate = 0.1f; // Time between shots in seconds
+    public float fireRate = 0.5f; // Time between shots in seconds
     private float nextFireTime = 0f;
     public bool alive = true; // Player's alive status
 
@@ -66,6 +66,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
 }
+
+    public void FireRateUpgrade(float fire)
+    {
+        fireRate = Mathf.Max(0.05f, fireRate - fire); // don't let fireRate go below 0.05
+    }
 
     void FixedUpdate()
     {

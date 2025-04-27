@@ -251,6 +251,7 @@ MonoBehaviour:
   healthBar: {fileID: 7676494205818469892}
   gameOverManager: {fileID: 0}
   healthItemPrefab: {fileID: 6706415200545705683, guid: 972108c2f3a1da54c8810da3443b979e, type: 3}
+  BulletItemPrefab: {fileID: 1268474335378303061, guid: 492dbf83a68584042a3fc2a62595d992, type: 3}
 --- !u!114 &2510400677681638694
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class HealthScript : MonoBehaviour
     private Transform player;
     public GameOverManager gameOverManager;
     public GameObject healthItemPrefab;
+    public GameObject BulletItemPrefab;
     AudioManager audioManager;
 
     private void Awake()
@@ -54,9 +55,17 @@ public class HealthScript : MonoBehaviour
                 }
                 ScoreManager.Instance.EnemyKilled();
 
-                if (Random.value < 0.15f && healthItemPrefab != null)
+                Vector3 spawnPos = transform.position;
+
+                if (Random.value < 0.15 && healthItemPrefab != null)
                 {
                     Instantiate(healthItemPrefab, transform.position, Quaternion.identity);
+                }
+                audioManager.PlaySFX2(audioManager.enemyDieSFX);
+                if (Random.value < 0.15 && BulletItemPrefab != null)
+                {
+                    Vector3 bulletOffset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-2f, 2f), 0f);
+                    Instantiate(BulletItemPrefab, spawnPos + bulletOffset, Quaternion.identity);
                 }
                 audioManager.PlaySFX2(audioManager.enemyDieSFX);
                 Destroy(gameObject);
