@@ -11,6 +11,7 @@ public class GameOverManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject GameOverUI;
     public GameObject SaveScoreUI;
+    public GameObject SaveScoreWinUI;
     public string MenuSceneLoad;
     public string NextLevel;
     public GameObject WinScreen;
@@ -19,6 +20,8 @@ public class GameOverManager : MonoBehaviour
     public ScoreManager scoreManager;
 
     private AudioSource audioSource;
+    private int score;
+    public TextMeshProUGUI ScoreText2;
 
     private void Start()
     {
@@ -38,7 +41,13 @@ public class GameOverManager : MonoBehaviour
 
     public IEnumerator ShowGameOver()
     {
-        int score = scoreManager.score;
+        if (scoreManager == null)
+        {
+            scoreManager = ScoreManager.Instance;
+        }
+
+        int score = scoreManager != null ? scoreManager.score : 0;
+
         audioSource.Play();
         Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(1);
@@ -62,20 +71,51 @@ public class GameOverManager : MonoBehaviour
             yield return null;
         }
 
-        // Snap to final value just in case
         color.a = maxFadeAlpha;
         RedFade.color = color;
 
         SaveScoreUI.SetActive(true);
         GameOverUI.SetActive(true);
-
     }
 
     public void NextButtonPressed()
     {
         GameOverUI.SetActive(false);
         Time.timeScale = 1f; // Varmistetaan, että peli jatkuu normaalisti
+
+        string currentScene = SceneManager.GetActiveScene().name;
+        WinScreen.SetActive(false);
+
+        if (currentScene == "Final")
+        {
+            Time.timeScale = 0f; // Varmistetaan, että peli jatkuu normaalisti
+            StartCoroutine(FadeOutNoLoad(2f)); // Fade out without loading a new scene
+        } else {
         SceneManager.LoadScene(NextLevel); // Ladataan seuraava kenttä
+        }
+    }
+
+    public IEnumerator FadeOutNoLoad(float duration)
+    {
+        float elapsed = 0f;
+        Color color = BlackFade.color;
+        color.a = 0f;
+        BlackFade.color = color;
+
+        while (elapsed < duration)
+        {
+            color.a = Mathf.Lerp(0f, 1f, elapsed / duration);
+            BlackFade.color = color;
+            elapsed += Time.unscaledDeltaTime; // Käytetään unscaledDeltaTimea, jotta animointi ei vaikuta Time.timeScale
+            yield return null;
+        }
+
+        color.a = 1f;
+        BlackFade.color = color;
+        SaveScoreWinUI.SetActive(true); // Näytetään voittoruudun tilastot
+        score = ScoreManager.Instance.score;
+        ScoreText2.text = "YOUR SCORE: " + score;
+        
     }
 
     public void MenuButtonPressed()

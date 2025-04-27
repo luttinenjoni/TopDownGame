@@ -35,6 +35,7 @@ public class SceneUIConnector : MonoBehaviour
     public TextMeshProUGUI HPScore;
     public TextMeshProUGUI AccuracyScore;
     public TextMeshProUGUI TotalScore;
+    public GameObject SaveScoreWinUI;
 
     void Start()
     {
@@ -92,6 +93,7 @@ public class SceneUIConnector : MonoBehaviour
             ScoreManager.Instance.HPScore = HPScore;
             ScoreManager.Instance.AccuracyScore = AccuracyScore;
             ScoreManager.Instance.TotalScore = TotalScore;
+            ScoreManager.Instance.SaveScoreWinUI = SaveScoreWinUI;
 
             ScoreManager.Instance.UpdateEnemyText();
             ScoreManager.Instance.InitLevelUI();

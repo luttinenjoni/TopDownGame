@@ -39,6 +39,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI HPScore;
     public TextMeshProUGUI AccuracyScore;
     public TextMeshProUGUI TotalScore;
+    public GameObject SaveScoreWinUI;
 
     private void Start()
     {
@@ -47,6 +48,10 @@ public class ScoreManager : MonoBehaviour
         if (currentScene == "Menu")
         {
             return;
+        }
+        if (currentScene == "Final")
+        {
+            SaveScoreWinUI.SetActive(false); //Hide SaveScoreWinUI at start
         }
         InitLevelUI();
     }
@@ -60,6 +65,11 @@ public class ScoreManager : MonoBehaviour
         SaveScoreUI.SetActive(false);
         UpdateEnemyText();
         scoreText.text = "Score: " + score;
+        string currentScene = SceneManager.GetActiveScene().name;
+        if (currentScene == "Final")
+        {
+            SaveScoreWinUI.SetActive(false); //Hide SaveScoreWinUI at start
+        }
     }
 
     public void Update()
@@ -153,10 +163,24 @@ public class ScoreManager : MonoBehaviour
             }
 
         }
+
+        if (level == 4)
+        {
+            enemyValue -= 1;
+            EnemiesKilled += 1;
+            UpdateEnemyText();
+
+            if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
+            {
+                StartCoroutine(Victory(2f));
+            }
+
+        }
     }
 
     IEnumerator Victory(float duration)
     {
+        string currentScene = SceneManager.GetActiveScene().name;
         isRunning = false;
         Time.timeScale = 0f; // Pause the game
         yield return new WaitForSecondsRealtime(duration); // Wait for the specified duration
@@ -187,6 +211,7 @@ public class ScoreManager : MonoBehaviour
         level += 1; //Seuraavaan kenttään
         NewLevelInit();
         SceneManager.LoadScene(NextLevel); // Ladataan seuraava kenttä
+        
     }
 
 
@@ -222,8 +247,6 @@ public class ScoreManager : MonoBehaviour
     // Tämä on viimeinen kohta, missä Time.timeScale asetetaan takaisin 1
     Time.timeScale = 1f;
     }
-
-
 
     public void StartTimer()
     {

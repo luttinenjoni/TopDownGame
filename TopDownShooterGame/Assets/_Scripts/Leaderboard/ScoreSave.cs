@@ -1,6 +1,6 @@
 using System.IO;
 using UnityEngine;
-using System.Collections.Generic;
+using System.Collections;
 using TMPro;
 
 public class SaveScore : MonoBehaviour
@@ -11,12 +11,29 @@ public class SaveScore : MonoBehaviour
     public TMP_InputField playerNameInput;
     public LeaderboardManager leaderboardManager;
     private bool pressed = false;
+    public TextMeshProUGUI scoreText2;
+
 
     void Start()
     {
-        scoreManager = ScoreManager.Instance; // Get the ScoreManager instance
+        // Safety check for ScoreManager initialization
+        if (scoreManager == null)
+        {
+            scoreManager = ScoreManager.Instance;
+            if (scoreManager == null)
+            {
+                Debug.LogError("ScoreManager is still not initialized!");
+                return; // Don't proceed if ScoreManager is not found
+            }
+        }
+
         score = scoreManager.score;
-        playerName = playerNameInput.text;
+
+        // Display the score if you have a UI element for it
+        if (scoreText2 != null)
+        {
+            scoreText2.text = "Score: " + score.ToString();
+        }
     }
 
     public void SaveButtonPressed()
@@ -25,7 +42,7 @@ public class SaveScore : MonoBehaviour
         {
             pressed = true;
             playerName = playerNameInput.text;
-            score = scoreManager.score;
+            score = ScoreManager.Instance.score;
             leaderboardManager.AddScore(playerName, score);
             Debug.Log("Score saved: " + playerName + ": " + score);
         }
