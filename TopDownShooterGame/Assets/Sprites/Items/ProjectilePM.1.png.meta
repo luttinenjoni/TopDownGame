@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -138,10 +138,10 @@ TextureImporter:
       name: ProjectilePM.1_0
       rect:
         serializedVersion: 2
-        x: 251
-        y: 161
-        width: 254
-        height: 110
+        x: 160
+        y: 2591
+        width: 111
+        height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: ProjectilePM.1_1
       rect:
         serializedVersion: 2
-        x: 1025
-        y: 161
-        width: 326
-        height: 110
+        x: 160
+        y: 1745
+        width: 111
+        height: 326
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,10 +182,10 @@ TextureImporter:
       name: ProjectilePM.1_2
       rect:
         serializedVersion: 2
-        x: 1799
-        y: 161
-        width: 380
-        height: 110
+        x: 160
+        y: 916
+        width: 111
+        height: 381
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +204,10 @@ TextureImporter:
       name: ProjectilePM.1_3
       rect:
         serializedVersion: 2
-        x: 2573
-        y: 161
-        width: 326
-        height: 110
+        x: 160
+        y: 197
+        width: 111
+        height: 326
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0e17b13f9c4fe394ca581c192f3107ec
     internalID: 0
     vertices: []
     indices: 
