@@ -253,6 +253,6 @@ public class ScoreManager : MonoBehaviour
         TotalScore.text = "Total score: " + TotalPoints.ToString("F0");
 
         score = (int)TotalPoints; //Päivitetään ScoreManagerin score muuttuja, jotta se voidaan tallentaa leaderboardille
-        GameData.SavedScore += score;
+        GameData.SavedScore = score;
     }
 }

@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
 
     //void OnBecameInvisible() {
         //Destroy(gameObject);
-    //} //Luoti tuhoutuu off-screenissa
+    //} //Luoti tuhoutuu off-screenissa, disabled for now
     private void OnCollisionEnter2D(Collision2D collision)
     {
     
