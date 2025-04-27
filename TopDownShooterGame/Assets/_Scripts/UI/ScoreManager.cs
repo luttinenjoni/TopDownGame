@@ -140,6 +140,19 @@ public class ScoreManager : MonoBehaviour
             }
 
         }
+
+        if (level == 3)
+        {
+            enemyValue -= 1;
+            EnemiesKilled += 1;
+            UpdateEnemyText();
+
+            if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
+            {
+                StartCoroutine(Victory(2f));
+            }
+
+        }
     }
 
     IEnumerator Victory(float duration)
