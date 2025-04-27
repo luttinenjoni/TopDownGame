@@ -5,6 +5,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject ShootingSpider;
     public GameObject MeleeBat;
+    public GameObject MeleeRaven;
     public GameObject Skeleton; // Add this line to declare the Skeleton prefab
     public Transform[] spawnPoints; // Size = 4, drag spawn points in inspector.
     public string currentScene;
