@@ -287,6 +287,14 @@ PrefabInstance:
       propertyPath: NextLevel
       value: Level3
       objectReference: {fileID: 0}
+    - target: {fileID: 8550145574716857001, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: SaveScoreUI
+      value: 
+      objectReference: {fileID: 1848130566}
+    - target: {fileID: 9078502097402282082, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1376,10 +1384,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.66222763
+    x: 0
     y: 0
-    width: 1.3387141
-    height: 1.5707071
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34

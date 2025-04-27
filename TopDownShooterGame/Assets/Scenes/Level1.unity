@@ -12814,11 +12814,24 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1804923809}
+    - target: {fileID: 8550145574716857001, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: SaveScoreUI
+      value: 
+      objectReference: {fileID: 4876804040690115647}
+    - target: {fileID: 9078502097402282082, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+--- !u!1 &4876804040690115647 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8303166947676268592, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+  m_PrefabInstance: {fileID: 4876804040690115646}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4963416220068150623
 PrefabInstance:
   m_ObjectHideFlags: 0

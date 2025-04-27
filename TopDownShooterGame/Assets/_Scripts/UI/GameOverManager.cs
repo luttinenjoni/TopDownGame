@@ -10,6 +10,7 @@ public class GameOverManager : MonoBehaviour
     public UnityEngine.UI.Image BlackFade;
     public GameObject gameOverPanel;
     public GameObject GameOverUI;
+    public GameObject SaveScoreUI;
     public string MenuSceneLoad;
     public string NextLevel;
     public GameObject WinScreen;
@@ -65,6 +66,7 @@ public class GameOverManager : MonoBehaviour
         color.a = maxFadeAlpha;
         RedFade.color = color;
 
+        SaveScoreUI.SetActive(true);
         GameOverUI.SetActive(true);
 
     }
