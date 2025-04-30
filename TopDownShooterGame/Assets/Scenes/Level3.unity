@@ -572,6 +572,7 @@ MonoBehaviour:
   gameOverManager: {fileID: 0}
   healthItemPrefab: {fileID: 6706415200545705683, guid: 972108c2f3a1da54c8810da3443b979e, type: 3}
   BulletItemPrefab: {fileID: 0}
+  bulletHell: {fileID: 0}
 --- !u!61 &141220210
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1401,10 +1402,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.20885418
     y: 0
-    width: 1
-    height: 1.0002418
+    width: 0.3388889
+    height: 0.33888888
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -14939,6 +14940,7 @@ MonoBehaviour:
   gameOverManager: {fileID: 1475124610}
   healthItemPrefab: {fileID: 6706415200545705683, guid: 972108c2f3a1da54c8810da3443b979e, type: 3}
   BulletItemPrefab: {fileID: 0}
+  bulletHell: {fileID: 0}
 --- !u!95 &1082886418
 Animator:
   serializedVersion: 7
@@ -19651,31 +19653,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 976308884833009050, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.49995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 976308884833009050, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 976308884833009050, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.49995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2292293560207304280, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2292293560207304280, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4312898614365275393, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.49995
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4312898614365275393, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4609072738001138511, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: leaderboardManager
@@ -19767,19 +19769,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6074861258771482701, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6449400039613478717, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6449400039613478717, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6449400039613478717, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8550145574716857001, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: NextLevel

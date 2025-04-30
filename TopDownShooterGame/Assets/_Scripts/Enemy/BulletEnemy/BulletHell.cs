@@ -9,6 +9,26 @@ public class BulletHell : MonoBehaviour
     public float fireRate = 0.4f; // Time between shots
 
     AudioManager audioManager;
+    private float nextHealthThreshold = 70f; // Start at some % of total health
+
+    public void CheckHealthAndUpdateFireRate(int currentHealth)
+    {
+        if (currentHealth <= nextHealthThreshold)
+        {
+            IncreaseFireRate();
+
+            // Decrease the threshold for next stage
+            nextHealthThreshold -= 30f; // Adjust as needed (e.g., 70 -> 40 -> 10)
+        }
+    }
+
+    void IncreaseFireRate()
+    {
+        fireRate = Mathf.Max(0.1f, fireRate - 0.3f); // Clamp to avoid too fast
+        CancelInvoke(nameof(Shoot));
+        InvokeRepeating(nameof(Shoot), 0f, fireRate);
+    }
+
 
     [System.Serializable]
     public class FirePointData

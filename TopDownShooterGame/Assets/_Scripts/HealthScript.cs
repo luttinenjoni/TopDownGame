@@ -10,6 +10,8 @@ public class HealthScript : MonoBehaviour
     public GameOverManager gameOverManager;
     public GameObject healthItemPrefab;
     public GameObject BulletItemPrefab;
+    public BulletHell bulletHell;
+
     AudioManager audioManager;
 
     private void Awake()
@@ -38,6 +40,12 @@ public class HealthScript : MonoBehaviour
         currentHealth -= damage; //HP:sta vähennetään damagen määrä
         UpdateHealthBar(); //Päivitä HP-palkki
 
+        // Fire rate increase for boss based on health
+        if (CompareTag("Boss") && bulletHell != null)
+        {
+            bulletHell.CheckHealthAndUpdateFireRate(currentHealth);
+        }
+
         if (currentHealth <= 0)
         {
 
@@ -47,48 +55,48 @@ public class HealthScript : MonoBehaviour
                 PlayerDies();
             }
 
-            if (gameObject.CompareTag("Enemy"))
-            {
-                if (ScoreManager.Instance != null)
+                if (CompareTag("Enemy") || CompareTag("Boss"))
                 {
-                    ScoreManager.Instance.AddScore(100);
-                }
-                ScoreManager.Instance.EnemyKilled();
+                    if (ScoreManager.Instance != null)
+                    {
+                        ScoreManager.Instance.AddScore(100);
+                        ScoreManager.Instance.EnemyKilled();
+                    }
 
-                Vector3 spawnPos = transform.position;
+                    Vector3 spawnPos = transform.position;
 
-                if (Random.value < 0.15 && healthItemPrefab != null)
-                {
-                    Instantiate(healthItemPrefab, transform.position, Quaternion.identity);
+                    if (Random.value < 0.15f && healthItemPrefab != null)
+                    {
+                        Instantiate(healthItemPrefab, spawnPos, Quaternion.identity);
+                    }
+
+                    if (Random.value < 0.15f && BulletItemPrefab != null)
+                    {
+                        Vector3 bulletOffset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-2f, 2f), 0f);
+                        Instantiate(BulletItemPrefab, spawnPos + bulletOffset, Quaternion.identity);
+                    }
+
+                    audioManager.PlaySFX2(audioManager.enemyDieSFX);
+                    Destroy(gameObject);
                 }
-                audioManager.PlaySFX2(audioManager.enemyDieSFX);
-                if (Random.value < 0.15 && BulletItemPrefab != null)
-                {
-                    Vector3 bulletOffset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-2f, 2f), 0f);
-                    Instantiate(BulletItemPrefab, spawnPos + bulletOffset, Quaternion.identity);
-                }
-                audioManager.PlaySFX2(audioManager.enemyDieSFX);
-                Destroy(gameObject);
             }
-            
         }
-    }
 
-    void PlayerDies()
-    {
-        StartCoroutine(gameOverManager.ShowGameOver());
-    }
-
-    void UpdateHealthBar()
-    {
-        if (healthBar != null)
+        void PlayerDies()
         {
-            healthBar.value = (float)currentHealth / maxHealth;//Päivitä HP-palkki
+            StartCoroutine(gameOverManager.ShowGameOver());
         }
-    }
 
-    public int CurrentHealth()
+        void UpdateHealthBar()
+        {
+            if (healthBar != null)
+            {
+                healthBar.value = (float)currentHealth / maxHealth;//Päivitä HP-palkki
+            }
+        }
+
+        public int CurrentHealth()
         {
             return currentHealth;
         }
-}
+    } 
