@@ -158,6 +158,26 @@ public class ScoreManager : MonoBehaviour
             EnemiesKilled += 1;
             UpdateEnemyText();
 
+            if (EnemiesKilled == 2) //Wave Two begins, when there are 3 alive enemies left
+            {
+                StartCoroutine(spawnManager.L3W2());
+            }
+
+            if (EnemiesKilled == 5)
+            {
+                StartCoroutine(spawnManager.L3W3());
+            }
+
+            if (EnemiesKilled == 8)
+            {
+                StartCoroutine(spawnManager.L3W4());
+            }
+
+            if (EnemiesKilled == 12)
+            {
+                StartCoroutine(spawnManager.L3W5());
+            }
+
             if (enemyValue <= 0) //If enemies left are 0, pause the game and show WinScreen
             {
                 StartCoroutine(Victory(2f));
