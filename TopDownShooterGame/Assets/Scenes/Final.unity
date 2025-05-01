@@ -9374,7 +9374,7 @@ MonoBehaviour:
   SFXSource3: {fileID: 1890319924}
   menubg: {fileID: 8300000, guid: 6821d1d495b90ac428411d23c0d069f3, type: 3}
   shootSFX: {fileID: 8300000, guid: 8154f5e18ea48164e9cb0132012cf432, type: 3}
-  enemyShootSFX: {fileID: 8300000, guid: 1ce7890406010c443a54576a00835e5a, type: 3}
+  enemyShootSFX: {fileID: 8300000, guid: de812cfb519929c4aad9d296f655c81d, type: 3}
   footstepSFX: {fileID: 8300000, guid: 37978bfc2423e08488ae265b81b126d0, type: 3}
   playClickSFX: {fileID: 0}
   clickSFX: {fileID: 0}
