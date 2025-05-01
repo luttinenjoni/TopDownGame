@@ -418,7 +418,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.218
-  m_Pitch: 1
+  m_Pitch: 1.81
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -3200,7 +3200,7 @@ MonoBehaviour:
   playClickSFX: {fileID: 0}
   clickSFX: {fileID: 0}
   healthSFX: {fileID: 8300000, guid: b6d2ea8d304d148f48e5c9254de0ec6d, type: 3}
-  enemyDieSFX: {fileID: 8300000, guid: 02c61ab0fea5406459c0c58fa0c5e3c8, type: 3}
+  enemyDieSFX: {fileID: 8300000, guid: 2ea3aa707c86a2341a413d6284ff2013, type: 3}
 --- !u!4 &762620606
 Transform:
   m_ObjectHideFlags: 0
@@ -21280,6 +21280,7 @@ MonoBehaviour:
   MrFrost: {fileID: 3433178278653620821, guid: fbf76133f92143e4ea16a313b4ab1584, type: 3}
   SnowRat: {fileID: 2677635856160707022, guid: 71696ce262f858243a6fbd1444613725, type: 3}
   BossBat: {fileID: 0}
+  BossEnemy: {fileID: 0}
   Skeleton: {fileID: 0}
   spawnPoints:
   - {fileID: 99278103}
