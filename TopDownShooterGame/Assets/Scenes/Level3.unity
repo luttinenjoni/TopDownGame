@@ -2602,10 +2602,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.07487923
     y: 0
-    width: 1
-    height: 0.9996406
+    width: 0.85024154
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -20882,12 +20882,36 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2189845691252235804, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
+    - target: {fileID: 2189845691252235804, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8535509998914666953, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
+    - target: {fileID: 2189845691252235804, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2292293560207304280, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2292293560207304280, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276234110043480173, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
+    - target: {fileID: 3276234110043480173, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8535509998914666953, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
+    - target: {fileID: 3276234110043480173, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4312898614365275393, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
@@ -20902,6 +20926,18 @@ PrefabInstance:
       propertyPath: leaderboardManager
       value: 
       objectReference: {fileID: 346916952}
+    - target: {fileID: 5124319099767058759, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
+    - target: {fileID: 5124319099767058759, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8535509998914666953, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
+    - target: {fileID: 5124319099767058759, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5819066482764743632, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
