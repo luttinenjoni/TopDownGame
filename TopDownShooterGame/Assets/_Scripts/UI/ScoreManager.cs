@@ -290,11 +290,11 @@ public class ScoreManager : MonoBehaviour
         }
         else if (level == 3)
         {
-            MaxTimePoints = 3000; //Max time points for level 3
+            MaxTimePoints = 2800; //Max time points for level 3
         }
         else if (level == 4)
         {
-            MaxTimePoints = 5000; //Max time points for level 4
+            MaxTimePoints = 4000; //Max time points for level 4
         }
 
         playerMovement = player.GetComponent<PlayerMovement>();
