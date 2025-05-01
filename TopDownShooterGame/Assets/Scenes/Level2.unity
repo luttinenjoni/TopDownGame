@@ -548,7 +548,7 @@ AudioSource:
   m_GameObject: {fileID: 133231228}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4887410939738830044, guid: 31cf651a90217f647a34a03d2a33567f, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -1956,9 +1956,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.07492448
+    x: 0
     y: 0
-    width: 0.85075533
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -13623,6 +13623,7 @@ MonoBehaviour:
   footstepInterval: 0.2
   fireRate: 0.5
   alive: 1
+  obtained: 1
 --- !u!61 &1082886413
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15606,7 +15607,7 @@ AudioSource:
   m_GameObject: {fileID: 1607458534}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3834168851625565562, guid: 31cf651a90217f647a34a03d2a33567f, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -15819,7 +15820,7 @@ AudioSource:
   m_GameObject: {fileID: 1664615434}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4887410939738830044, guid: 31cf651a90217f647a34a03d2a33567f, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -16036,6 +16037,7 @@ MonoBehaviour:
   FrostWolf: {fileID: 0}
   MrFrost: {fileID: 0}
   SnowRat: {fileID: 0}
+  BossBat: {fileID: 0}
   Skeleton: {fileID: 1871394362455900029, guid: ee789602dae1d744c8bc0a2f92efe562, type: 3}
   spawnPoints:
   - {fileID: 99278103}
@@ -17225,7 +17227,7 @@ AudioSource:
   m_GameObject: {fileID: 1890319922}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4887410939738830044, guid: 31cf651a90217f647a34a03d2a33567f, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
