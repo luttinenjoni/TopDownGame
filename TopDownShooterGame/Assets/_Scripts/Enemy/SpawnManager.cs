@@ -7,6 +7,9 @@ public class SpawnManager : MonoBehaviour
     public GameObject MeleeBat;
     public GameObject MeleeRaven;
     public GameObject PumpkinMan;
+    public GameObject FrostWolf;
+    public GameObject MrFrost;
+    public GameObject SnowRat;
     public GameObject Skeleton; // Add this line to declare the Skeleton prefab
     public Transform[] spawnPoints; // Size = 4, drag spawn points in inspector.
     public string currentScene;
