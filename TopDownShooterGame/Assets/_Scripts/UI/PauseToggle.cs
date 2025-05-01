@@ -5,6 +5,7 @@ public class PauseToggle : MonoBehaviour
     private bool isPaused = false;
     public GameObject pauseMenuUI; // Assign your pause menu UI in the Inspector
     public GameObject OptionsUI;
+    public PlayerMovement player; // Reference to the Player script
 
     void Start()
     {
@@ -16,9 +17,13 @@ public class PauseToggle : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        if (player.alive == true)
         {
-            TogglePause();
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                TogglePause();
+            }
         }
     }
 

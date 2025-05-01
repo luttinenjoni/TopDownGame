@@ -99,7 +99,7 @@ public class MenuScreen : MonoBehaviour
 
         dialogueManager.StartDialogue(
             "A curious and brave girl ventures to investigate the glow on her own only to find an ancient power of destruction!\n\n" +
-            "Suddenly guardians of this power from the past appear and try to destroy her.\n\n" +
+            "Suddenly, guardians of this power from the past appear and try to destroy her.\n\n" +
             "She has only one option and that is to fight!"
         );
     }

@@ -40,6 +40,7 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI AccuracyScore;
     public TextMeshProUGUI TotalScore;
     public GameObject SaveScoreWinUI;
+    public PlayerMovement playerMovement;
 
     private void Start()
     {
@@ -256,6 +257,8 @@ public class ScoreManager : MonoBehaviour
 
     public void WinStats()
     {
+        playerMovement = player.GetComponent<PlayerMovement>();
+        playerMovement.alive = false; //Pelaaja kuolee
 
         SaveScoreUI.SetActive(true);
         isRunning = false;
