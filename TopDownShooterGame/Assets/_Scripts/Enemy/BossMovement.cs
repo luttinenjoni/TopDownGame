@@ -17,6 +17,8 @@ public class BossMovement : MonoBehaviour
     {
         waitTime = startWaitTime;
 
+        moveSpot = GameObject.Find("MoveSpot").transform;
+
         moveSpot.position = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
     }
 

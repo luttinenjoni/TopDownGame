@@ -11,6 +11,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject MrFrost;
     public GameObject SnowRat;
     public GameObject BossBat;
+    public GameObject BossEnemy;
     public GameObject Skeleton; // Add this line to declare the Skeleton prefab
     public Transform[] spawnPoints; // Size = 4, drag spawn points in inspector.
     public string currentScene;
@@ -289,9 +290,14 @@ public class SpawnManager : MonoBehaviour
 
     public IEnumerator L4W1()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(5);
         int randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
-        Transform spawnPoint = spawnPoints[randomIndex];
+        Transform spawnPoint = spawnPoints[0];
+        Instantiate(BossEnemy, spawnPoint.position, spawnPoint.rotation);
+
+        yield return new WaitForSeconds(5);
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
         Instantiate(BossBat, spawnPoint.position, spawnPoint.rotation);
         yield return new WaitForSeconds(5);
         randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
@@ -306,6 +312,10 @@ public class SpawnManager : MonoBehaviour
         spawnPoint = spawnPoints[randomIndex];
         Instantiate(BossBat, spawnPoint.position, spawnPoint.rotation);
         yield return new WaitForSeconds(2);
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
+        Instantiate(BossBat, spawnPoint.position, spawnPoint.rotation);
+        yield return new WaitForSeconds(5);
         randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
         spawnPoint = spawnPoints[randomIndex];
         Instantiate(BossBat, spawnPoint.position, spawnPoint.rotation);
