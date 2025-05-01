@@ -8,6 +8,7 @@ public class OrbScript : MonoBehaviour
 
     public SpawnManager spawnManager;
     private ScoreManager scoreManager;
+    public PlayerMovement playerMovement; // Reference to the Player script
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class OrbScript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        playerMovement.obtained = true;
         scoreManager.StartTimer();
 
         spawnManager.OrbTaken();

@@ -21,6 +21,17 @@ public class PlayerMovement : MonoBehaviour
 
     private const string horizontal = "Horizontal";
     private const string vertical = "Vertical";
+    private string currentScene;
+    public bool obtained = true; // If the player has obtained the weapon
+
+    void Start()
+    {
+        currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (currentScene == "Level1")
+        {
+            obtained = false;
+        }
+    }
 
     private void Awake()
     {
@@ -53,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
+            if (obtained == false) // If the player has not obtained the weapon, do not shoot
+                return;
             if (Time.timeScale == 0f) // If the game is paused, don't shoot
                 return;
 
