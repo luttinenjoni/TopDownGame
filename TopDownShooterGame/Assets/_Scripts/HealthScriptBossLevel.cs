@@ -70,7 +70,7 @@ public class HealthScriptBossLevel : MonoBehaviour
                     Instantiate(healthItemPrefab, spawnPos, Quaternion.identity);
                 }
 
-                if (Random.value < 0.85f && BulletItemPrefab != null)
+                if (Random.value < 0.80f && BulletItemPrefab != null)
                 {
                     Vector3 bulletOffset = new Vector3(Random.Range(-0.5f, 0.5f), Random.Range(-2f, 2f), 0f);
                     Instantiate(BulletItemPrefab, spawnPos + bulletOffset, Quaternion.identity);
