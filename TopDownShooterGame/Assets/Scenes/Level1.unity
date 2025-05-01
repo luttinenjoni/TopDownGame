@@ -17447,6 +17447,7 @@ MonoBehaviour:
   MrFrost: {fileID: 0}
   SnowRat: {fileID: 0}
   BossBat: {fileID: 0}
+  BossEnemy: {fileID: 0}
   Skeleton: {fileID: 0}
   spawnPoints:
   - {fileID: 99278103}
@@ -22469,7 +22470,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 464735099740703641, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}

@@ -2602,10 +2602,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.6610272
     y: 0
-    width: 1
-    height: 1
+    width: 1.3362875
+    height: 1.5707071
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -21092,7 +21092,8 @@ PrefabInstance:
       value: SetMusicVolume
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 464735099740703641, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
