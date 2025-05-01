@@ -514,7 +514,7 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.218
-  m_Pitch: 1
+  m_Pitch: 2.45
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -1917,10 +1917,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.22135417
+    x: 0
     y: 0
-    width: 0.3138889
-    height: 0.31388888
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -3764,7 +3764,7 @@ MonoBehaviour:
   playClickSFX: {fileID: 0}
   clickSFX: {fileID: 0}
   healthSFX: {fileID: 8300000, guid: b6d2ea8d304d148f48e5c9254de0ec6d, type: 3}
-  enemyDieSFX: {fileID: 8300000, guid: f8af0d56e07212043bb652b3951debeb, type: 3}
+  enemyDieSFX: {fileID: 8300000, guid: 69f90022fb26bb84c9ea37b72c3e1bc3, type: 3}
 --- !u!4 &762620606
 Transform:
   m_ObjectHideFlags: 0
