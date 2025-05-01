@@ -4,6 +4,7 @@ using System.Net.NetworkInformation;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using JetBrains.Annotations;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -277,6 +278,25 @@ public class ScoreManager : MonoBehaviour
 
     public void WinStats()
     {
+        int MaxTimePoints = 2400;
+
+        if (level == 1)
+        {
+            MaxTimePoints = 2400; //Max time points for level 1
+        }
+        else if (level == 2)
+        {
+            MaxTimePoints = 2400; //Max time points for level 2
+        }
+        else if (level == 3)
+        {
+            MaxTimePoints = 3000; //Max time points for level 3
+        }
+        else if (level == 4)
+        {
+            MaxTimePoints = 5000; //Max time points for level 4
+        }
+
         playerMovement = player.GetComponent<PlayerMovement>();
         playerMovement.alive = false; //Pelaaja kuolee
 
@@ -284,7 +304,7 @@ public class ScoreManager : MonoBehaviour
         isRunning = false;
         float WinTime = timer;
         TimeText.text = "Time passed: " + WinTime.ToString("F1");
-        float TimePoints = 2400 - Mathf.Round(timer * 10f);
+        float TimePoints = MaxTimePoints - Mathf.Round(timer * 10f);
         TimeScore.text = TimePoints.ToString("F0");
 
         KillText.text = "Enemies killed: " + EnemiesKilled;

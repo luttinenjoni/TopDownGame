@@ -264,13 +264,21 @@ public class SpawnManager : MonoBehaviour
 
     public IEnumerator L3W5()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         int randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
         Transform spawnPoint = spawnPoints[randomIndex];
-        Instantiate(FrostWolf, spawnPoint.position, spawnPoint.rotation);
+        spawnPoint = spawnPoints[1];
+        Instantiate(MrFrost, spawnPoint.position, spawnPoint.rotation);
         yield return new WaitForSeconds(1);
+        spawnPoint = spawnPoints[3];
+        Instantiate(MrFrost, spawnPoint.position, spawnPoint.rotation);
+        yield return new WaitForSeconds(4);
         randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
         spawnPoint = spawnPoints[randomIndex];
-        Instantiate(MrFrost, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(FrostWolf, spawnPoint.position, spawnPoint.rotation);
+        yield return new WaitForSeconds(3);
+        randomIndex = Random.Range(0, spawnPoints.Length); // 0 to 3
+        spawnPoint = spawnPoints[randomIndex];
+        Instantiate(SnowRat, spawnPoint.position, spawnPoint.rotation);
     }
 }

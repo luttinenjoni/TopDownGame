@@ -2602,9 +2602,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.0625
     y: 0
-    width: 1
+    width: 0.8753087
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -15745,7 +15745,7 @@ PrefabInstance:
       objectReference: {fileID: 1735916658}
     - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
       propertyPath: enemyValue
-      value: 5
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 476708390397535468, guid: e7ada40ed8ee67448a20b546fa51e35d, type: 3}
       propertyPath: SaveScoreUI
@@ -19053,7 +19053,7 @@ Transform:
   m_GameObject: {fileID: 1321169800}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.96, y: 4.92, z: 0}
+  m_LocalPosition: {x: 8.53, y: 6.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
