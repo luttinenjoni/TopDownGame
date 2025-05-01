@@ -36,6 +36,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0.20200348, y: 0}
   m_SizeDelta: {x: -9.595, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &464735099740703641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7282001191900120832}
+  - component: {fileID: 563097062422608171}
+  - component: {fileID: 7544313388257658527}
+  m_Layer: 5
+  m_Name: NightMode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7282001191900120832
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464735099740703641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5819066482764743632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.6362, y: 159.56}
+  m_SizeDelta: {x: 910.98, y: 910.98}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &563097062422608171
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464735099740703641}
+  m_CullTransparentMesh: 1
+--- !u!114 &7544313388257658527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464735099740703641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.54901963}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &529510838460265347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,11 +1816,14 @@ MonoBehaviour:
   BlackFade: {fileID: 1181358138622855791}
   gameOverPanel: {fileID: 7442408012078249500}
   GameOverUI: {fileID: 1182320385691026718}
-  MenuSceneLoad: 
-  NextLevel: 
+  SaveScoreUI: {fileID: 0}
+  SaveScoreWinUI: {fileID: 0}
+  MenuSceneLoad: Menu
+  NextLevel: Level3
   WinScreen: {fileID: 1814286357103416184}
   ScoreText: {fileID: 0}
   scoreManager: {fileID: 0}
+  ScoreText2: {fileID: 0}
   fadeDuration: 2
   maxFadeAlpha: 0.75
 --- !u!1 &3117083533206867626
@@ -2023,8 +2101,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Enemies left: 10'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 30ea9e929f0f42843a8ba0f9a5652193, type: 2}
-  m_sharedMaterial: {fileID: 8535509998914666953, guid: 30ea9e929f0f42843a8ba0f9a5652193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
+  m_sharedMaterial: {fileID: 8535509998914666953, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2567,8 +2645,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: PAUSED
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 30ea9e929f0f42843a8ba0f9a5652193, type: 2}
-  m_sharedMaterial: {fileID: 8535509998914666953, guid: 30ea9e929f0f42843a8ba0f9a5652193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
+  m_sharedMaterial: {fileID: 8535509998914666953, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3286,8 +3364,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 30ea9e929f0f42843a8ba0f9a5652193, type: 2}
-  m_sharedMaterial: {fileID: 8535509998914666953, guid: 30ea9e929f0f42843a8ba0f9a5652193, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
+  m_sharedMaterial: {fileID: 8535509998914666953, guid: a109d157f073fff408caae27e6ff3c73, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3898,7 +3976,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6074861258771482701}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 0.025, y: 0.025, z: 0.025}
   m_ConstrainProportionsScale: 0
@@ -3909,6 +3987,7 @@ RectTransform:
   - {fileID: 2493896459729166157}
   - {fileID: 3624236828996270168}
   - {fileID: 803282536056180675}
+  - {fileID: 7282001191900120832}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3961,7 +4040,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &881461296873235529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4017,11 +4096,14 @@ MonoBehaviour:
   BlackFade: {fileID: 1181358138622855791}
   gameOverPanel: {fileID: 7442408012078249500}
   GameOverUI: {fileID: 1182320385691026718}
+  SaveScoreUI: {fileID: 8303166947676268592}
+  SaveScoreWinUI: {fileID: 0}
   MenuSceneLoad: Menu
-  NextLevel: Level2
+  NextLevel: Final
   WinScreen: {fileID: 1814286357103416184}
   ScoreText: {fileID: 1596293594174829401}
   scoreManager: {fileID: 0}
+  ScoreText2: {fileID: 0}
   fadeDuration: 2
   maxFadeAlpha: 0.75
 --- !u!82 &6013865266964056358
@@ -4135,6 +4217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 8119859803642605168}
   OptionsUI: {fileID: 1260636867954858677}
+  player: {fileID: 0}
 --- !u!1 &6385491202793466979
 GameObject:
   m_ObjectHideFlags: 0
@@ -5657,6 +5740,7 @@ MonoBehaviour:
   scoreManager: {fileID: 0}
   playerNameInput: {fileID: 7098891234323215938}
   leaderboardManager: {fileID: 0}
+  scoreText2: {fileID: 0}
 --- !u!1 &8394556757901216361
 GameObject:
   m_ObjectHideFlags: 0
