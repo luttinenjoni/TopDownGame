@@ -8811,9 +8811,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0625
+    x: 0
     y: 0
-    width: 0.8753087
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -13511,6 +13511,67 @@ Transform:
   - {fileID: 263732338}
   m_Father: {fileID: 170430207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1062453917
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 868694834593484097, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943583639818203033, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_Name
+      value: ShootingSpider
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433632045980213209, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.3788633
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433632045980213209, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5803715
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433632045980213209, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.04747002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433632045980213209, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433632045980213209, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433632045980213209, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433632045980213209, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433632045980213209, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433632045980213209, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433632045980213209, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0b2fd9952e0d6094c8bcaf5d9615753d, type: 3}
 --- !u!1 &1066574461
 GameObject:
   m_ObjectHideFlags: 0
@@ -17441,6 +17502,10 @@ MonoBehaviour:
   MeleeBat: {fileID: 896242379505645022, guid: bd489fd9dd6aa4f43ae6be939221fe76, type: 3}
   MeleeRaven: {fileID: 0}
   PumpkinMan: {fileID: 0}
+  FrostWolf: {fileID: 0}
+  MrFrost: {fileID: 0}
+  SnowRat: {fileID: 0}
+  BossBat: {fileID: 0}
   Skeleton: {fileID: 0}
   spawnPoints:
   - {fileID: 99278103}
@@ -22710,3 +22775,4 @@ SceneRoots:
   - {fileID: 762620606}
   - {fileID: 4963416220068150623}
   - {fileID: 1804923808}
+  - {fileID: 1062453917}
