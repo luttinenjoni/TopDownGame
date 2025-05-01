@@ -155,8 +155,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 724893237
+  m_SortingLayer: -7
   m_SortingOrder: 0
   m_Sprite: {fileID: 94274877111143577, guid: 802f53b1626000844bcddcd737d97992, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -312,6 +312,7 @@ MonoBehaviour:
   gameOverManager: {fileID: 0}
   healthItemPrefab: {fileID: 6706415200545705683, guid: 972108c2f3a1da54c8810da3443b979e, type: 3}
   BulletItemPrefab: {fileID: 1268474335378303061, guid: 492dbf83a68584042a3fc2a62595d992, type: 3}
+  bulletHell: {fileID: 0}
 --- !u!1 &4242008648782656866
 GameObject:
   m_ObjectHideFlags: 0

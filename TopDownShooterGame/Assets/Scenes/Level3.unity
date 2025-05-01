@@ -2602,10 +2602,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0625
+    x: 0
     y: 0
-    width: 0.8753087
-    height: 1
+    width: 1
+    height: 0.99938554
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -3111,6 +3111,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 836228468111444609, guid: ea3990313c623ab47b30214f9ed3c3a5, type: 3}
+      propertyPath: m_SortingLayer
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 836228468111444609, guid: ea3990313c623ab47b30214f9ed3c3a5, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 724893237
+      objectReference: {fileID: 0}
     - target: {fileID: 2325091210530329692, guid: ea3990313c623ab47b30214f9ed3c3a5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -21311,6 +21319,7 @@ MonoBehaviour:
   FrostWolf: {fileID: 6915563251446870503, guid: ea3990313c623ab47b30214f9ed3c3a5, type: 3}
   MrFrost: {fileID: 3433178278653620821, guid: fbf76133f92143e4ea16a313b4ab1584, type: 3}
   SnowRat: {fileID: 2677635856160707022, guid: 71696ce262f858243a6fbd1444613725, type: 3}
+  BossBat: {fileID: 0}
   Skeleton: {fileID: 0}
   spawnPoints:
   - {fileID: 99278103}
@@ -22677,11 +22686,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6256237145711240508, guid: 71696ce262f858243a6fbd1444613725, type: 3}
       propertyPath: m_SortingLayer
-      value: -5
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 6256237145711240508, guid: 71696ce262f858243a6fbd1444613725, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1127662843
+      value: 724893237
       objectReference: {fileID: 0}
     - target: {fileID: 7166856404101841094, guid: 71696ce262f858243a6fbd1444613725, type: 3}
       propertyPath: m_Layer
@@ -22791,11 +22800,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3672949822170600119, guid: fbf76133f92143e4ea16a313b4ab1584, type: 3}
       propertyPath: m_SortingLayer
-      value: -5
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 3672949822170600119, guid: fbf76133f92143e4ea16a313b4ab1584, type: 3}
       propertyPath: m_SortingLayerID
-      value: -1127662843
+      value: 724893237
       objectReference: {fileID: 0}
     - target: {fileID: 3979183022077065895, guid: fbf76133f92143e4ea16a313b4ab1584, type: 3}
       propertyPath: m_AnchorMax.y
