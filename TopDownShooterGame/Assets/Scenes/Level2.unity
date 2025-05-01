@@ -305,7 +305,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5819066482764743632, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 952547001}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44976343f8a78f7488ef6836eb3e07d1, type: 3}
 --- !u!224 &25514721 stripped
@@ -1953,10 +1956,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.07487923
+    x: 0
     y: 0
-    width: 0.85024154
-    height: 1
+    width: 1
+    height: 1.0000879
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -3854,7 +3857,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.98742133, g: 0.5865007, b: 0.10867833, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: ebe46443ff62f7149dcde32835fe342b053bc9bc6743cfeaf7fec265b19306eed323097900000000bb611333c37e38ec
@@ -3904,6 +3907,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &952547000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 952547001}
+  - component: {fileID: 952547003}
+  - component: {fileID: 952547002}
+  m_Layer: 5
+  m_Name: NightMode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &952547001
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952547000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 25514721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.6362, y: 159.56}
+  m_SizeDelta: {x: 910.98, y: 910.98}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &952547002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952547000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.54901963}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &952547003
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952547000}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1032145995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13885,7 +13963,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.98742133, g: 0.5865007, b: 0.10867833, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: ebe46443ff62f7149dcde32835fe342b053bc9bc6743cfeaf7fec265b19306eed323097900000000bb611333c37e38ec
@@ -15665,7 +15743,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.98742133, g: 0.5865007, b: 0.10867833, a: 1}
-  m_Intensity: 3
+  m_Intensity: 5
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: ebe46443ff62f7149dcde32835fe342b053bc9bc6743cfeaf7fec265b19306eed323097900000000bb611333c37e38ec
@@ -15955,6 +16033,9 @@ MonoBehaviour:
   MeleeBat: {fileID: 896242379505645022, guid: bd489fd9dd6aa4f43ae6be939221fe76, type: 3}
   MeleeRaven: {fileID: 7070668820712965009, guid: a51c9694f20dc9b4eb192b81b4147201, type: 3}
   PumpkinMan: {fileID: 3429667210101342529, guid: e5b8d00b9f2fea44fb5dc3da68fb9fa9, type: 3}
+  FrostWolf: {fileID: 0}
+  MrFrost: {fileID: 0}
+  SnowRat: {fileID: 0}
   Skeleton: {fileID: 1871394362455900029, guid: ee789602dae1d744c8bc0a2f92efe562, type: 3}
   spawnPoints:
   - {fileID: 99278103}
