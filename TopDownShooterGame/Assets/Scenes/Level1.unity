@@ -8811,9 +8811,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0625
+    x: 0
     y: 0
-    width: 0.8753087
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -17441,6 +17441,10 @@ MonoBehaviour:
   MeleeBat: {fileID: 896242379505645022, guid: bd489fd9dd6aa4f43ae6be939221fe76, type: 3}
   MeleeRaven: {fileID: 0}
   PumpkinMan: {fileID: 0}
+  FrostWolf: {fileID: 0}
+  MrFrost: {fileID: 0}
+  SnowRat: {fileID: 0}
+  BossBat: {fileID: 0}
   Skeleton: {fileID: 0}
   spawnPoints:
   - {fileID: 99278103}
