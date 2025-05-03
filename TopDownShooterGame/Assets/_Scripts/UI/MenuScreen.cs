@@ -141,14 +141,7 @@ public class MenuScreen : MonoBehaviour
 
     public void QuitGame()
     {
-        if (Application.isEditor)
-        {
-            UnityEditor.EditorApplication.isPlaying = false; // Stop play mode in the editor
-        }
-        else
-        {
-            // Quit the game
-            Application.Quit();
-        }
+        Application.Quit();
+        Debug.Log("Game is quitting"); // This will only show in the editor, not in the built game
     }
 }
