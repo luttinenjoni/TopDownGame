@@ -138,4 +138,17 @@ public class MenuScreen : MonoBehaviour
         OptionsUI.SetActive(false);
 
     }
+
+    public void QuitGame()
+    {
+        if (Application.isEditor)
+        {
+            UnityEditor.EditorApplication.isPlaying = false; // Stop play mode in the editor
+        }
+        else
+        {
+            // Quit the game
+            Application.Quit();
+        }
+    }
 }
