@@ -8615,9 +8615,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0625
+    x: 0.07492448
     y: 0
-    width: 0.8753087
+    width: 0.85075533
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -10435,7 +10435,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 579918584}
         m_TargetAssemblyTypeName: GameOverManager, Assembly-CSharp
-        m_MethodName: MenuButtonPressed
+        m_MethodName: FinalMenuButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
