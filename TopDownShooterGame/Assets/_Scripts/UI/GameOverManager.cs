@@ -125,6 +125,12 @@ public class GameOverManager : MonoBehaviour
         StartCoroutine(FadeOutAndLoad(2f));
     }
 
+    public void FinalMenuButton()
+    {
+        Time.timeScale = 1f; // Varmistetaan, että peli jatkuu normaalisti
+        SceneManager.LoadScene("Menu"); // Ladataan päävalikko
+    }
+
     IEnumerator FadeOutAndLoad(float duration)
     {
     // Pidä peli pausella, kunnes fade on valmis

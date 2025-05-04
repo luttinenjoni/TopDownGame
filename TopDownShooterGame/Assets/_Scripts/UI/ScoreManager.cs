@@ -8,6 +8,7 @@ using JetBrains.Annotations;
 
 public class ScoreManager : MonoBehaviour
 {
+
     public static ScoreManager Instance;
     public int enemyValue = 12;
     public UnityEngine.UI.Image BlackFade;
@@ -294,7 +295,7 @@ public class ScoreManager : MonoBehaviour
         }
         else if (level == 4)
         {
-            MaxTimePoints = 4000; //Max time points for level 4
+            MaxTimePoints = 4600; //Max time points for level 4
         }
 
         playerMovement = player.GetComponent<PlayerMovement>();
