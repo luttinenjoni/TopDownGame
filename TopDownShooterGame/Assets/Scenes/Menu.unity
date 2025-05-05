@@ -1091,6 +1091,22 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3960044475020428060, guid: 42f2411f814280d4db243a38a2992501, type: 3}
   m_PrefabInstance: {fileID: 5966776497058184073}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &389309287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389309285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15bf71f8a4d4f094f98a483206993455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crtMaterial: {fileID: 2100000, guid: 49112e8274a194b4d99ab8ea2ebcf93f, type: 2}
+  defaultMaterial: {fileID: 0}
+  targetRenderer: {fileID: 0}
+  crtToggle: {fileID: 0}
 --- !u!1 &393284910
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,9 +1537,9 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.02347418
+    x: 0
     y: 0
-    width: 0.95357335
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -3935,7 +3951,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5480016708970551447, guid: 42f2411f814280d4db243a38a2992501, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 389309287}
   m_SourcePrefab: {fileID: 100100000, guid: 42f2411f814280d4db243a38a2992501, type: 3}
 --- !u!1001 &7939995044213904689
 PrefabInstance:
